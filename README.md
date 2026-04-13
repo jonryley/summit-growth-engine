@@ -3,7 +3,7 @@
 
 Genesis Arc is a commercial operating system designed to help organisations win more business by transforming how sales, business development, CRM, and delivery work together.
 
-It replaces activity driven sales with **structured execution, clear decision making, and measurable progress**.
+It replaces activity driven sales with structured execution, clear decision making, and measurable progress.
 
 ---
 
@@ -25,7 +25,7 @@ Genesis Arc fixes this.
 
 ## What Genesis Arc Does
 
-Genesis Arc introduces a **stage and gate driven lifecycle** that ensures:
+Genesis Arc introduces a stage and gate driven lifecycle that ensures:
 
 - Only the right opportunities progress  
 - The right data is captured at the right time  
@@ -35,18 +35,23 @@ Genesis Arc introduces a **stage and gate driven lifecycle** that ensures:
 
 ---
 
-## The Lifecycle
+## The Full Lifecycle (Stages and Gates)
 
 ```mermaid
 flowchart LR
-    A[0 Signal] --> B[Gate 0]
-    B --> C[1 Qualify]
-    C --> D[Gate 1]
-    D --> E[2 Value]
-    E --> F[Gate 2]
-    F --> G[3 Convert]
-    G --> H[Gate 3]
-    H --> I[4 Deliver]
-    I --> J[Gate 4]
-    J --> K[5 Amplify]
-    K --> L[Gate 5]
+    A[Stage 0 Signal] --> B[Gate 0 Signal Check]
+
+    B --> C[Stage 1 Qualify]
+    C --> D[Gate 1 Qualification Gate]
+
+    D --> E[Stage 2 Value]
+    E --> F[Gate 2 Value Gate]
+
+    F --> G[Stage 3 Convert]
+    G --> H[Gate 3 Conversion Gate]
+
+    H --> I[Stage 4 Deliver]
+    I --> J[Gate 4 Delivery Readiness Gate]
+
+    J --> K[Stage 5 Amplify]
+    K --> L[Gate 5 Growth Gate]

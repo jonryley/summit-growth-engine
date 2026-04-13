@@ -31,8 +31,3 @@ flowchart LR
     C --> D[3 Convert]
     D --> E[4 Deliver]
     E --> F[5 Amplify]
-
-## Author
-
-Jon Ryley  
-jonryley.com

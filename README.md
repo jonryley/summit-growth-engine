@@ -42,7 +42,7 @@ Genesis Arc introduces a stage driven lifecycle that ensures:
 ## The Genesis Arc in Practice
 
 <p align="center">
-  <img src="images/Jon%20Ryley%20Genesis%20Arc%20GBL.png" alt="Genesis Arc Gated Business Lifecycle" width="900"/>
+  <img src="images/GAGBL.png" alt="Genesis Arc Gated Business Lifecycle" width="900"/>
 </p>
 
 ---

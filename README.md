@@ -1,3 +1,7 @@
+<p align="right">
+  <img src="images%20images/JR%20LOGO%2001%20New.png" alt="Jon Ryley Logo" width="120"/>
+</p>
+
 # Genesis Arc  
 ## The Gated Business Lifecycle for Predictable, Scalable Growth
 

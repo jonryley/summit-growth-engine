@@ -45,3 +45,8 @@ Genesis Arc introduces a stage driven lifecycle that ensures:
 flowchart LR
     A["Stage 0 Signal"] --> B["Stage 1 Qualify"] --> C["Stage 2 Value"] --> D["Stage 3 Convert"] --> E["Stage 4 Deliver"] --> F["Stage 5 Amplify"]
 
+---
+
+<p align="center">
+  <img src="images/Jon%20Ryley%20Genesis%20Arc%20GBL.png" alt="Genesis Arc Gated Business Lifecycle" width="900"/>
+</p>

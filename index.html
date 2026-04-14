@@ -28,6 +28,13 @@
       color: #dddddd;
     }
 
+    .logo {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      width: 120px;
+    }
+
     .hero {
       text-align: center;
       padding: 100px 20px 60px;
@@ -35,26 +42,11 @@
 
     .hero h1 {
       font-size: 48px;
-      margin-bottom: 10px;
     }
 
     .hero h2 {
       font-size: 22px;
       font-weight: normal;
-      margin-bottom: 20px;
-    }
-
-    .hero p {
-      max-width: 700px;
-      margin: auto;
-      font-size: 18px;
-    }
-
-    .logo {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      width: 120px;
     }
 
     .btn {
@@ -85,32 +77,45 @@
       margin-top: 40px;
     }
 
-    .card {
+    .card-box {
       border: 1px solid #333;
       padding: 25px;
       margin: 15px;
-      width: 300px;
+      width: 280px;
       background: #111;
     }
 
-    .pipeline {
+    /* KANBAN */
+
+    .kanban {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 40px;
+      overflow-x: auto;
+      padding: 20px 0;
     }
 
-    .stage {
-      border: 1px solid #333;
-      padding: 20px;
-      margin: 10px;
-      min-width: 200px;
+    .column {
+      min-width: 220px;
+      margin-right: 15px;
       background: #111;
+      border: 1px solid #333;
+      padding: 15px;
     }
 
-    .highlight {
-      font-size: 22px;
-      margin-top: 20px;
+    .column h3 {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .card {
+      background: #1a1a1a;
+      padding: 12px;
+      margin-bottom: 10px;
+      border: 1px solid #333;
+      font-size: 14px;
+    }
+
+    .card small {
+      color: #888;
     }
 
     .footer {
@@ -120,6 +125,7 @@
       border-top: 1px solid #333;
       color: #888;
     }
+
   </style>
 </head>
 
@@ -138,102 +144,91 @@
         A commercial operating system that transforms how organisations win, deliver, and grow business.
       </p>
 
-      <a href="https://github.com/jonryley/GA-GBL-process" class="btn">View Framework</a>
       <a href="https://jonryley.com/contact" class="btn">Start a Conversation</a>
     </div>
 
     <!-- PROBLEM -->
     <div class="section">
       <h2>The Reality</h2>
-      <p class="highlight">
-        Most organisations do not have a pipeline problem  
-        They have a qualification problem
+      <p>
+        Most organisations do not have a pipeline problem.  
+        They have a qualification problem.
       </p>
 
       <div class="grid">
-        <div class="card">Too many weak opportunities progress</div>
-        <div class="card">CRM tracks activity, not decision quality</div>
-        <div class="card">Forecasts are built on optimism</div>
-      </div>
-    </div>
-
-    <!-- SOLUTION -->
-    <div class="section">
-      <h2>The Shift</h2>
-      <p class="highlight">
-        From activity-driven sales to structured commercial execution
-      </p>
-
-      <div class="grid">
-        <div class="card">Clear qualification</div>
-        <div class="card">Evidence-based progression</div>
-        <div class="card">Aligned sales and delivery</div>
+        <div class="card-box">Too many weak opportunities progress</div>
+        <div class="card-box">CRM tracks activity, not decisions</div>
+        <div class="card-box">Forecasts based on optimism</div>
       </div>
     </div>
 
     <!-- PIPELINE -->
     <div class="section">
-      <h2>The Lifecycle</h2>
+      <h2>Pipeline in Motion</h2>
+      <p>Opportunities move through structured stages with clear decision gates</p>
 
-      <div class="pipeline">
-        <div class="stage"><h3>Signal</h3><p>Identify opportunity</p></div>
-        <div class="stage"><h3>Qualify</h3><p>Decide if worth pursuing</p></div>
-        <div class="stage"><h3>Value</h3><p>Define commercial outcome</p></div>
-        <div class="stage"><h3>Convert</h3><p>Win with structure</p></div>
-        <div class="stage"><h3>Deliver</h3><p>Execute successfully</p></div>
-        <div class="stage"><h3>Amplify</h3><p>Scale growth</p></div>
-      </div>
-    </div>
+      <div class="kanban">
 
-    <!-- PROOF -->
-    <div class="section">
-      <h2>Proven Impact</h2>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Centrica</h3>
-          <p>+40% order growth<br>£70M additional sales</p>
+        <div class="column">
+          <h3>Signal</h3>
+          <div class="card">Telent Bid Process<br><small>£300k</small></div>
         </div>
 
-        <div class="card">
-          <h3>Balfour Beatty</h3>
-          <p>From worst to best balance sheet performance</p>
+        <div class="column">
+          <h3>Qualify</h3>
+          <div class="card">Network Rail Opex<br><small>£750k</small></div>
         </div>
 
-        <div class="card">
-          <h3>NCC Group</h3>
-          <p>Sales transformation for cyber security growth</p>
+        <div class="column">
+          <h3>Value</h3>
+          <div class="card">D2Zero Growth Model<br><small>£1.2M</small></div>
         </div>
+
+        <div class="column">
+          <h3>Convert</h3>
+          <div class="card">Evelyn Partners CRM<br><small>£500k</small></div>
+        </div>
+
+        <div class="column">
+          <h3>Deliver</h3>
+          <div class="card">Centrica Net Zero<br><small>£1.5M</small></div>
+        </div>
+
+        <div class="column">
+          <h3>Amplify</h3>
+          <div class="card">Hughes Energy Expansion<br><small>High Growth</small></div>
+        </div>
+
       </div>
     </div>
 
     <!-- PRINCIPLE -->
     <div class="section">
       <h2>Core Principle</h2>
-      <p class="highlight">
-        Gates create truth  
-        Truth creates growth
+      <p>
+        Gates create truth.  
+        Truth creates growth.
       </p>
     </div>
 
     <!-- DIFFERENCE -->
     <div class="section">
       <h2>The Difference</h2>
-      <p class="highlight">
-        CRM tracks activity  
-        Genesis Arc controls progression
+      <p>
+        CRM tracks activity.  
+        Genesis Arc controls progression.
       </p>
     </div>
 
     <!-- CTA -->
     <div class="section">
       <h2>If sales feels harder than it should</h2>
-      <p class="highlight">
-        It is not a capability problem  
-        It is a structure problem
+      <p>
+        It is not a capability problem.  
+        It is a structure problem.
       </p>
 
-      <a href="https://jonryley.com/contact" class="btn">Start a Conversation</a>
+      <a href="https://jonryley.com/contact" class="btn">Let’s Fix It</a>
     </div>
 
     <!-- FOOTER -->

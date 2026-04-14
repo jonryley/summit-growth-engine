@@ -14,17 +14,35 @@ body {
   color: white;
 }
 
+/* HEADER */
+
 .header {
-  padding: 20px 40px;
+  padding: 15px 30px;
   border-bottom: 1px solid #222;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo {
+  height: 40px;
+}
+
 .header h1 {
   color: #d4af37;
   margin: 0;
+  font-size: 20px;
+}
+
+#totalPipeline {
+  color: #d4af37;
+  font-size: 14px;
 }
 
 .container {
@@ -38,6 +56,8 @@ body {
   gap: 15px;
   overflow-x: auto;
 }
+
+/* STAGE */
 
 .stage {
   background: #111;
@@ -134,7 +154,13 @@ body {
 <body>
 
 <div class="header">
-  <h1>Genesis Arc Pipeline</h1>
+  <div class="header-left">
+    <img src="images/JR%20LOGO%20white.png" class="logo">
+    <div>
+      <h1>Genesis Arc Pipeline</h1>
+      <div id="totalPipeline">Total Pipeline: £0</div>
+    </div>
+  </div>
   <div>Gated Business Lifecycle</div>
 </div>
 
@@ -146,10 +172,10 @@ body {
 <div class="stage">
   <div class="stage-header">
     <div class="stage-title">Signal</div>
-    <div class="stage-value">£800k</div>
+    <div class="stage-value" id="signalTotal"></div>
   </div>
   <div class="stage-body">
-    <div class="card amber" onclick="openModal('Telent Bid Process','£300k','Early stage','Engage stakeholders')">
+    <div class="card amber" data-value="300000" onclick="openModal('Telent Bid Process','£300k','Early stage','Engage stakeholders')">
       <div class="card-title">Telent Bid Process</div>
       <div class="card-value">£300k</div>
     </div>
@@ -160,14 +186,14 @@ body {
 <div class="stage">
   <div class="stage-header">
     <div class="stage-title">Qualify</div>
-    <div class="stage-value">£1.85M</div>
+    <div class="stage-value" id="qualifyTotal"></div>
   </div>
   <div class="stage-body">
-    <div class="card green" onclick="openModal('Network Rail Opex','£750k','Qualified','Define value')">
+    <div class="card green" data-value="750000" onclick="openModal('Network Rail Opex','£750k','Qualified','Define value')">
       <div class="card-title">Network Rail Opex</div>
       <div class="card-value">£750k</div>
     </div>
-    <div class="card amber" onclick="openModal('TfGM Signalling','£1.1M','Needs shaping','Stakeholder alignment')">
+    <div class="card amber" data-value="1100000" onclick="openModal('TfGM Signalling','£1.1M','Needs shaping','Stakeholder alignment')">
       <div class="card-title">TfGM Signalling</div>
       <div class="card-value">£1.1M</div>
     </div>
@@ -178,10 +204,10 @@ body {
 <div class="stage">
   <div class="stage-header">
     <div class="stage-title">Value</div>
-    <div class="stage-value">£1.2M</div>
+    <div class="stage-value" id="valueTotal"></div>
   </div>
   <div class="stage-body">
-    <div class="card green" onclick="openModal('D2Zero Growth','£1.2M','Value defined','Build proposal')">
+    <div class="card green" data-value="1200000" onclick="openModal('D2Zero Growth','£1.2M','Value defined','Build proposal')">
       <div class="card-title">D2Zero Growth</div>
       <div class="card-value">£1.2M</div>
     </div>
@@ -192,10 +218,10 @@ body {
 <div class="stage">
   <div class="stage-header">
     <div class="stage-title">Convert</div>
-    <div class="stage-value">£500k</div>
+    <div class="stage-value" id="convertTotal"></div>
   </div>
   <div class="stage-body">
-    <div class="card amber" onclick="openModal('Evelyn Partners','£500k','Proposal stage','Close plan')">
+    <div class="card amber" data-value="500000" onclick="openModal('Evelyn Partners','£500k','Proposal stage','Close plan')">
       <div class="card-title">Evelyn Partners CRM</div>
       <div class="card-value">£500k</div>
     </div>
@@ -206,10 +232,10 @@ body {
 <div class="stage">
   <div class="stage-header">
     <div class="stage-title">Deliver</div>
-    <div class="stage-value">£1.5M</div>
+    <div class="stage-value" id="deliverTotal"></div>
   </div>
   <div class="stage-body">
-    <div class="card green" onclick="openModal('Centrica Net Zero','£1.5M','In delivery','Expand')">
+    <div class="card green" data-value="1500000" onclick="openModal('Centrica Net Zero','£1.5M','In delivery','Expand')">
       <div class="card-title">Centrica Net Zero</div>
       <div class="card-value">£1.5M</div>
     </div>
@@ -220,10 +246,10 @@ body {
 <div class="stage">
   <div class="stage-header">
     <div class="stage-title">Amplify</div>
-    <div class="stage-value">High Growth</div>
+    <div class="stage-value" id="amplifyTotal"></div>
   </div>
   <div class="stage-body">
-    <div class="card green" onclick="openModal('Hughes Energy','High Growth','Scaling','Expand across group')">
+    <div class="card green" data-value="2000000" onclick="openModal('Hughes Energy','High Growth','Scaling','Expand across group')">
       <div class="card-title">Hughes Energy</div>
       <div class="card-value">Expansion</div>
     </div>
@@ -246,6 +272,9 @@ body {
 </div>
 
 <script>
+
+/* MODAL */
+
 function openModal(title,value,status,next){
   document.getElementById("modal").style.display = "block";
   document.getElementById("title").innerText = title;
@@ -257,6 +286,46 @@ function openModal(title,value,status,next){
 function closeModal(){
   document.getElementById("modal").style.display = "none";
 }
+
+/* CALCULATIONS */
+
+function calculatePipeline() {
+  let total = 0;
+
+  let stageTotals = {
+    signal: 0,
+    qualify: 0,
+    value: 0,
+    convert: 0,
+    deliver: 0,
+    amplify: 0
+  };
+
+  document.querySelectorAll('.stage').forEach(stage => {
+    let stageName = stage.querySelector('.stage-title').innerText.toLowerCase();
+    let stageTotal = 0;
+
+    stage.querySelectorAll('.card').forEach(card => {
+      let val = parseFloat(card.getAttribute('data-value'));
+      if (!isNaN(val)) {
+        total += val;
+        stageTotal += val;
+      }
+    });
+
+    if(stageTotals[stageName] !== undefined){
+      stageTotals[stageName] = stageTotal;
+      document.getElementById(stageName + "Total").innerText =
+        "£" + stageTotal.toLocaleString();
+    }
+  });
+
+  document.getElementById('totalPipeline').innerText =
+    "Total Pipeline: £" + total.toLocaleString();
+}
+
+calculatePipeline();
+
 </script>
 
 </body>

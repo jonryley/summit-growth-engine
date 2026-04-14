@@ -5,6 +5,17 @@
 # Genesis Arc  
 ## The Gated Business Lifecycle for Predictable, Scalable Growth
 
+Most repositories store information.
+
+Genesis Arc drives decisions.
+
+Each stage is defined.
+Each gate creates truth.
+Each progression is earned.
+
+This is not a collection of files.
+It is a navigable commercial system.
+
 Genesis Arc is a commercial operating system designed to help organisations win more business by transforming how sales, business development, CRM, and delivery work together.
 
 It replaces activity driven sales with structured execution, clear decision making, and measurable progress.

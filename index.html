@@ -6,7 +6,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -22,6 +21,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .header-left {
@@ -40,7 +41,13 @@ body {
   font-size: 20px;
 }
 
-#totalPipeline {
+.metrics {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.metric {
   color: #d4af37;
   font-size: 14px;
 }
@@ -55,6 +62,8 @@ body {
   display: flex;
   gap: 15px;
   overflow-x: auto;
+  align-items: flex-start;
+  padding-bottom: 10px;
 }
 
 /* STAGE */
@@ -62,9 +71,15 @@ body {
 .stage {
   background: #111;
   border: 1px solid #222;
-  min-width: 260px;
+  min-width: 280px;
   display: flex;
   flex-direction: column;
+  border-radius: 6px;
+}
+
+.stage.drag-over {
+  border-color: #d4af37;
+  box-shadow: 0 0 0 1px #d4af37 inset;
 }
 
 /* STAGE HEADER */
@@ -73,6 +88,7 @@ body {
   padding: 12px;
   border-bottom: 1px solid #222;
   background: #0f0f0f;
+  border-radius: 6px 6px 0 0;
 }
 
 .stage-title {
@@ -83,12 +99,14 @@ body {
 .stage-value {
   font-size: 12px;
   color: #888;
+  margin-top: 4px;
 }
 
 /* CARDS */
 
 .stage-body {
   padding: 10px;
+  min-height: 220px;
 }
 
 .card {
@@ -96,13 +114,18 @@ body {
   border: 1px solid #333;
   padding: 12px;
   margin-bottom: 10px;
-  cursor: pointer;
+  cursor: grab;
   transition: all 0.2s;
+  border-radius: 4px;
 }
 
 .card:hover {
   border-color: #d4af37;
   transform: translateY(-2px);
+}
+
+.card.dragging {
+  opacity: 0.55;
 }
 
 .card-title {
@@ -113,6 +136,12 @@ body {
 .card-value {
   font-size: 12px;
   color: #aaa;
+  margin-bottom: 4px;
+}
+
+.card-date {
+  font-size: 12px;
+  color: #888;
 }
 
 /* HEALTH */
@@ -131,6 +160,7 @@ body {
   width: 100%;
   height: 100%;
   background: rgba(0,0,0,0.9);
+  z-index: 1000;
 }
 
 .modal-content {
@@ -140,14 +170,15 @@ body {
   width: 90%;
   max-width: 600px;
   border: 1px solid #333;
+  border-radius: 6px;
 }
 
 .close {
   float: right;
   cursor: pointer;
   color: #d4af37;
+  font-size: 18px;
 }
-
 </style>
 </head>
 
@@ -155,114 +186,125 @@ body {
 
 <div class="header">
   <div class="header-left">
-    <img src="images/JR%20LOGO%20white.png" class="logo">
+    <img src="images/JR%20LOGO%20white.png" class="logo" alt="JR Logo">
     <div>
       <h1>Genesis Arc Pipeline</h1>
-      <div id="totalPipeline">Total Pipeline: £0</div>
+      <div style="color:#888; font-size:13px;">Gated Business Lifecycle</div>
     </div>
   </div>
-  <div>Gated Business Lifecycle</div>
+
+  <div class="metrics">
+    <div class="metric" id="totalPipeline">Total Pipeline: £0</div>
+    <div class="metric" id="weightedPipeline">Weighted Pipeline: £0</div>
+  </div>
 </div>
 
 <div class="container">
 
 <div class="pipeline">
 
-<!-- SIGNAL -->
-<div class="stage">
-  <div class="stage-header">
-    <div class="stage-title">Signal</div>
-    <div class="stage-value" id="signalTotal"></div>
-  </div>
-  <div class="stage-body">
-    <div class="card amber" data-value="300000"
-    onclick="openModal('Telent Bid Process','£300k','Early stage','Engage stakeholders','https://github.com/jonryley/GA-GBL-process/blob/main/stages/stage-0-signal.md')">
-      <div class="card-title">Telent Bid Process</div>
-      <div class="card-value">£300k</div>
+  <!-- SIGNAL -->
+  <div class="stage" data-stage="Signal" data-weight="0.10">
+    <div class="stage-header">
+      <div class="stage-title">Signal</div>
+      <div class="stage-value" id="signalTotal"></div>
+    </div>
+    <div class="stage-body">
+      <div class="card amber" draggable="true" data-value="300000" data-close="2026-06-30"
+      onclick="openModal('Telent Bid Process','£300k','Early stage','Engage stakeholders','30 Jun 2026','https://github.com/jonryley/GA-GBL-process/blob/main/stages/stage-0-signal.md')">
+        <div class="card-title">Telent Bid Process</div>
+        <div class="card-value">£300k</div>
+        <div class="card-date">Close: 30 Jun 2026</div>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- QUALIFY -->
-<div class="stage">
-  <div class="stage-header">
-    <div class="stage-title">Qualify</div>
-    <div class="stage-value" id="qualifyTotal"></div>
-  </div>
-  <div class="stage-body">
-    <div class="card green" data-value="750000"
-    onclick="openModal('Network Rail Opex','£750k','Qualified','Define value','https://github.com/jonryley/GA-GBL-process/blob/main/stages/stage-1-qualify.md')">
-      <div class="card-title">Network Rail Opex</div>
-      <div class="card-value">£750k</div>
+  <!-- QUALIFY -->
+  <div class="stage" data-stage="Qualify" data-weight="0.25">
+    <div class="stage-header">
+      <div class="stage-title">Qualify</div>
+      <div class="stage-value" id="qualifyTotal"></div>
     </div>
+    <div class="stage-body">
+      <div class="card green" draggable="true" data-value="750000" data-close="2026-07-15"
+      onclick="openModal('Network Rail Opex','£750k','Qualified','Define value','15 Jul 2026','https://github.com/jonryley/GA-GBL-process/blob/main/stages/stage-1-qualify.md')">
+        <div class="card-title">Network Rail Opex</div>
+        <div class="card-value">£750k</div>
+        <div class="card-date">Close: 15 Jul 2026</div>
+      </div>
 
-    <div class="card amber" data-value="1100000"
-    onclick="openModal('TfGM Signalling','£1.1M','Needs shaping','Stakeholder alignment','https://github.com/jonryley/GA-GBL-process/blob/main/stages/stage-1-qualify.md')">
-      <div class="card-title">TfGM Signalling</div>
-      <div class="card-value">£1.1M</div>
+      <div class="card amber" draggable="true" data-value="1100000" data-close="2026-08-01"
+      onclick="openModal('TfGM Signalling','£1.1M','Needs shaping','Stakeholder alignment','01 Aug 2026','https://github.com/jonryley/GA-GBL-process/blob/main/stages/stage-1-qualify.md')">
+        <div class="card-title">TfGM Signalling</div>
+        <div class="card-value">£1.1M</div>
+        <div class="card-date">Close: 01 Aug 2026</div>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- VALUE -->
-<div class="stage">
-  <div class="stage-header">
-    <div class="stage-title">Value</div>
-    <div class="stage-value" id="valueTotal"></div>
-  </div>
-  <div class="stage-body">
-    <div class="card green" data-value="1200000"
-    onclick="openModal('D2Zero Growth','£1.2M','Value defined','Build proposal','https://github.com/jonryley/GA-GBL-process/blob/main/stages/stage-2-value.md')">
-      <div class="card-title">D2Zero Growth</div>
-      <div class="card-value">£1.2M</div>
+  <!-- VALUE -->
+  <div class="stage" data-stage="Value" data-weight="0.50">
+    <div class="stage-header">
+      <div class="stage-title">Value</div>
+      <div class="stage-value" id="valueTotal"></div>
+    </div>
+    <div class="stage-body">
+      <div class="card green" draggable="true" data-value="1200000" data-close="2026-08-20"
+      onclick="openModal('D2Zero Growth','£1.2M','Value defined','Build proposal','20 Aug 2026','https://github.com/jonryley/GA-GBL-process/blob/main/stages/stage-2-value.md')">
+        <div class="card-title">D2Zero Growth</div>
+        <div class="card-value">£1.2M</div>
+        <div class="card-date">Close: 20 Aug 2026</div>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- CONVERT -->
-<div class="stage">
-  <div class="stage-header">
-    <div class="stage-title">Convert</div>
-    <div class="stage-value" id="convertTotal"></div>
-  </div>
-  <div class="stage-body">
-    <div class="card amber" data-value="500000"
-    onclick="openModal('Evelyn Partners','£500k','Proposal stage','Close plan','https://github.com/jonryley/GA-GBL-process/blob/main/stages/stage-3-convert.md')">
-      <div class="card-title">Evelyn Partners CRM</div>
-      <div class="card-value">£500k</div>
+  <!-- CONVERT -->
+  <div class="stage" data-stage="Convert" data-weight="0.75">
+    <div class="stage-header">
+      <div class="stage-title">Convert</div>
+      <div class="stage-value" id="convertTotal"></div>
+    </div>
+    <div class="stage-body">
+      <div class="card amber" draggable="true" data-value="500000" data-close="2026-05-31"
+      onclick="openModal('Evelyn Partners','£500k','Proposal stage','Close plan','31 May 2026','https://github.com/jonryley/GA-GBL-process/blob/main/stages/stage-3-convert.md')">
+        <div class="card-title">Evelyn Partners CRM</div>
+        <div class="card-value">£500k</div>
+        <div class="card-date">Close: 31 May 2026</div>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- DELIVER -->
-<div class="stage">
-  <div class="stage-header">
-    <div class="stage-title">Deliver</div>
-    <div class="stage-value" id="deliverTotal"></div>
-  </div>
-  <div class="stage-body">
-    <div class="card green" data-value="1500000"
-    onclick="openModal('Centrica Net Zero','£1.5M','In delivery','Expand','https://github.com/jonryley/GA-GBL-process/blob/main/stages/stage-4-deliver.md')">
-      <div class="card-title">Centrica Net Zero</div>
-      <div class="card-value">£1.5M</div>
+  <!-- DELIVER -->
+  <div class="stage" data-stage="Deliver" data-weight="1.00">
+    <div class="stage-header">
+      <div class="stage-title">Deliver</div>
+      <div class="stage-value" id="deliverTotal"></div>
+    </div>
+    <div class="stage-body">
+      <div class="card green" draggable="true" data-value="1500000" data-close="2026-09-30"
+      onclick="openModal('Centrica Net Zero','£1.5M','In delivery','Expand','30 Sep 2026','https://github.com/jonryley/GA-GBL-process/blob/main/stages/stage-4-deliver.md')">
+        <div class="card-title">Centrica Net Zero</div>
+        <div class="card-value">£1.5M</div>
+        <div class="card-date">Close: 30 Sep 2026</div>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- AMPLIFY -->
-<div class="stage">
-  <div class="stage-header">
-    <div class="stage-title">Amplify</div>
-    <div class="stage-value" id="amplifyTotal"></div>
-  </div>
-  <div class="stage-body">
-    <div class="card green" data-value="2000000"
-    onclick="openModal('Hughes Energy','£2.0M+','Scaling','Expand across group','https://github.com/jonryley/GA-GBL-process/blob/main/stages/stage-5-amplify.md')">
-      <div class="card-title">Hughes Energy</div>
-      <div class="card-value">£2.0M+</div>
+  <!-- AMPLIFY -->
+  <div class="stage" data-stage="Amplify" data-weight="1.00">
+    <div class="stage-header">
+      <div class="stage-title">Amplify</div>
+      <div class="stage-value" id="amplifyTotal"></div>
+    </div>
+    <div class="stage-body">
+      <div class="card green" draggable="true" data-value="2000000" data-close="2026-12-31"
+      onclick="openModal('Hughes Energy','£2.0M+','Scaling','Expand across group','31 Dec 2026','https://github.com/jonryley/GA-GBL-process/blob/main/stages/stage-5-amplify.md')">
+        <div class="card-title">Hughes Energy</div>
+        <div class="card-value">£2.0M+</div>
+        <div class="card-date">Close: 31 Dec 2026</div>
+      </div>
     </div>
   </div>
-</div>
 
 </div>
 </div>
@@ -270,64 +312,107 @@ body {
 <!-- MODAL -->
 
 <div id="modal" class="modal">
-<div class="modal-content">
-<span class="close" onclick="closeModal()">X</span>
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">X</span>
 
-<h2 id="title"></h2>
+    <h2 id="title"></h2>
 
-<p><strong>Value:</strong> <span id="value"></span></p>
-<p><strong>Status:</strong> <span id="status"></span></p>
-<p><strong>Next Step:</strong> <span id="next"></span></p>
+    <p><strong>Value:</strong> <span id="value"></span></p>
+    <p><strong>Status:</strong> <span id="status"></span></p>
+    <p><strong>Next Step:</strong> <span id="next"></span></p>
+    <p><strong>Close Date:</strong> <span id="closeDate"></span></p>
 
-<br>
+    <br>
 
-<a id="stageLink" href="#" target="_blank" style="color:#d4af37;">
-  View Stage Definition
-</a>
-
-</div>
+    <a id="stageLink" href="#" target="_blank" style="color:#d4af37;">
+      View Stage Definition
+    </a>
+  </div>
 </div>
 
 <script>
-
-function openModal(title,value,status,next,stageUrl){
+function openModal(title, value, status, next, closeDate, stageUrl) {
   document.getElementById("modal").style.display = "block";
   document.getElementById("title").innerText = title;
   document.getElementById("value").innerText = value;
   document.getElementById("status").innerText = status;
   document.getElementById("next").innerText = next;
+  document.getElementById("closeDate").innerText = closeDate;
   document.getElementById("stageLink").href = stageUrl;
 }
 
-function closeModal(){
+function closeModal() {
   document.getElementById("modal").style.display = "none";
 }
 
 function calculatePipeline() {
   let total = 0;
+  let weighted = 0;
 
   document.querySelectorAll('.stage').forEach(stage => {
-    let stageName = stage.querySelector('.stage-title').innerText.toLowerCase();
+    const stageName = stage.querySelector('.stage-title').innerText.toLowerCase();
+    const stageWeight = parseFloat(stage.getAttribute('data-weight')) || 0;
     let stageTotal = 0;
 
     stage.querySelectorAll('.card').forEach(card => {
-      let val = parseFloat(card.getAttribute('data-value'));
+      const val = parseFloat(card.getAttribute('data-value'));
       if (!isNaN(val)) {
         total += val;
         stageTotal += val;
+        weighted += val * stageWeight;
       }
     });
 
-    document.getElementById(stageName + "Total").innerText =
-      "£" + stageTotal.toLocaleString();
+    const totalElement = document.getElementById(stageName + "Total");
+    if (totalElement) {
+      totalElement.innerText = "£" + stageTotal.toLocaleString();
+    }
   });
 
   document.getElementById('totalPipeline').innerText =
     "Total Pipeline: £" + total.toLocaleString();
+
+  document.getElementById('weightedPipeline').innerText =
+    "Weighted Pipeline: £" + Math.round(weighted).toLocaleString();
 }
 
-calculatePipeline();
+let draggedCard = null;
 
+document.querySelectorAll('.card').forEach(card => {
+  card.addEventListener('dragstart', () => {
+    draggedCard = card;
+    card.classList.add('dragging');
+  });
+
+  card.addEventListener('dragend', () => {
+    card.classList.remove('dragging');
+    draggedCard = null;
+    document.querySelectorAll('.stage').forEach(stage => stage.classList.remove('drag-over'));
+    calculatePipeline();
+  });
+});
+
+document.querySelectorAll('.stage-body').forEach(stageBody => {
+  stageBody.addEventListener('dragover', e => {
+    e.preventDefault();
+    stageBody.parentElement.classList.add('drag-over');
+  });
+
+  stageBody.addEventListener('dragleave', () => {
+    stageBody.parentElement.classList.remove('drag-over');
+  });
+
+  stageBody.addEventListener('drop', e => {
+    e.preventDefault();
+    if (draggedCard) {
+      stageBody.appendChild(draggedCard);
+    }
+    stageBody.parentElement.classList.remove('drag-over');
+    calculatePipeline();
+  });
+});
+
+calculatePipeline();
 </script>
 
 </body>

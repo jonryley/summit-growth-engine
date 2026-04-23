@@ -253,7 +253,7 @@ body {
   <div class="pipeline">
 
     <!-- SIGNAL -->
-    <div class="stage" data-stage="Signal" data-weight="0.10" data-url="https://github.com/jonryley/GA-GBL-process/blob/main/stages/stage-0-signal.md" data-status="Early stage">
+    <div class="stage" data-stage="Signal" data-weight="0.10" data-url="https://github.com/jonryley/GA-GBL-process/blob/main/stages/stage-0-signal.md" data-status="Opportunity identified">
       <div class="stage-header">
         <div class="stage-title">Signal</div>
         <div class="stage-value" id="signalTotal"></div>
@@ -264,7 +264,7 @@ body {
           <div class="card-title">Balfour Beatty — CRM</div>
           <div class="card-value">£350k</div>
           <div class="card-date">Close: 30 Jun 2026</div>
-          <div class="card-status">Status: Early stage</div>
+          <div class="card-status">Status: Opportunity identified</div>
           <div class="card-meta">Construction | CRM</div>
         </div>
 
@@ -272,7 +272,7 @@ body {
           <div class="card-title">Barratt Redrow — Consultancy</div>
           <div class="card-value">£420k</div>
           <div class="card-date">Close: 15 Jul 2026</div>
-          <div class="card-status">Status: Early stage</div>
+          <div class="card-status">Status: Opportunity identified</div>
           <div class="card-meta">Construction | Consultancy</div>
         </div>
 
@@ -280,7 +280,7 @@ body {
           <div class="card-title">SSE — GBL License</div>
           <div class="card-value">£500k</div>
           <div class="card-date">Close: 01 Aug 2026</div>
-          <div class="card-status">Status: Early stage</div>
+          <div class="card-status">Status: Opportunity identified</div>
           <div class="card-meta">Energy | GBL License</div>
         </div>
 
@@ -288,7 +288,7 @@ body {
           <div class="card-title">National Grid — CRM</div>
           <div class="card-value">£375k</div>
           <div class="card-date">Close: 12 Aug 2026</div>
-          <div class="card-status">Status: Early stage</div>
+          <div class="card-status">Status: Opportunity identified</div>
           <div class="card-meta">Infrastructure | CRM</div>
         </div>
 
@@ -296,7 +296,7 @@ body {
           <div class="card-title">Severn Trent — Consultancy</div>
           <div class="card-value">£300k</div>
           <div class="card-date">Close: 20 Aug 2026</div>
-          <div class="card-status">Status: Early stage</div>
+          <div class="card-status">Status: Opportunity identified</div>
           <div class="card-meta">Infrastructure | Consultancy</div>
         </div>
 
@@ -304,7 +304,7 @@ body {
     </div>
 
     <!-- QUALIFY -->
-    <div class="stage" data-stage="Qualify" data-weight="0.25" data-url="https://github.com/jonryley/GA-GBL-process/blob/main/stages/stage-1-qualify.md" data-status="Qualified">
+    <div class="stage" data-stage="Qualify" data-weight="0.25" data-url="https://github.com/jonryley/GA-GBL-process/blob/main/stages/stage-1-qualify.md" data-status="In qualification">
       <div class="stage-header">
         <div class="stage-title">Qualify</div>
         <div class="stage-value" id="qualifyTotal"></div>
@@ -382,7 +382,7 @@ body {
     </div>
 
     <!-- CONVERT -->
-    <div class="stage" data-stage="Convert" data-weight="0.75" data-url="https://github.com/jonryley/GA-GBL-process/blob/main/stages/stage-3-convert.md" data-status="Proposal stage">
+    <div class="stage" data-stage="Convert" data-weight="0.75" data-url="https://github.com/jonryley/GA-GBL-process/blob/main/stages/stage-3-convert.md" data-status="Proposal & close">
       <div class="stage-header">
         <div class="stage-title">Convert</div>
         <div class="stage-value" id="convertTotal"></div>
@@ -393,7 +393,7 @@ body {
           <div class="card-title">Persimmon — CRM</div>
           <div class="card-value">£900k</div>
           <div class="card-date">Close: 31 Jul 2026</div>
-          <div class="card-status">Status: Proposal stage</div>
+          <div class="card-status">Status: Proposal & close</div>
           <div class="card-meta">Construction | CRM</div>
         </div>
 
@@ -401,7 +401,7 @@ body {
           <div class="card-title">SSE — GBL License</div>
           <div class="card-value">£1.1M</div>
           <div class="card-date">Close: 15 Aug 2026</div>
-          <div class="card-status">Status: Proposal stage</div>
+          <div class="card-status">Status: Proposal & close</div>
           <div class="card-meta">Energy | GBL License</div>
         </div>
 
@@ -409,7 +409,7 @@ body {
           <div class="card-title">United Utilities — CRM</div>
           <div class="card-value">£850k</div>
           <div class="card-date">Close: 01 Sep 2026</div>
-          <div class="card-status">Status: Proposal stage</div>
+          <div class="card-status">Status: Proposal & close</div>
           <div class="card-meta">Infrastructure | CRM</div>
         </div>
 
@@ -548,7 +548,7 @@ function getStageMetaFromCard(card) {
 function getNextStepByStage(stageName) {
   const map = {
     "Signal": "Engage stakeholders",
-    "Qualify": "Define value",
+    "Qualify": "Complete qualification",
     "Value": "Build proposal",
     "Convert": "Close plan",
     "Deliver": "Expand engagement",

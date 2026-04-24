@@ -2,12 +2,12 @@
   <img src="images/JR%20Logo%2001%20New.png" alt="Jon Ryley Logo" width="120"/>
 </p>
 
-# Genesis Arc  
+# Summit  
 ## The Gated Business Lifecycle for Predictable, Scalable Growth
 
 Most repositories store information.
 
-Genesis Arc drives decisions.
+The Summit Framework drives decisions.
 
 Each stage is defined.  
 Each gate creates truth.  
@@ -16,7 +16,7 @@ Each progression is earned.
 This is not a collection of files.  
 It is a navigable commercial system.
 
-Genesis Arc is a commercial operating system designed to help organisations win more business by transforming how sales, business development, CRM, and delivery work together.
+Summit is a commercial operating system designed to help organisations win more business by transforming how sales, business development, CRM, and delivery work together.
 
 It replaces activity driven sales with structured execution, clear decision making, and measurable progress.
 
@@ -24,7 +24,7 @@ It ensures opportunities move based on evidence, not optimism.
 
 ---
 
-## Why Genesis Arc Exists
+## Why Summit Exists
 
 Most organisations do not have a sales problem.  
 
@@ -36,13 +36,13 @@ They have:
 - Poor alignment between sales and delivery  
 - Forecasts based on hope rather than evidence  
 
-Genesis Arc fixes this.
+Sumiit fixes this.
 
 ---
 
-## What Genesis Arc Does
+## What Summit Does
 
-Genesis Arc introduces a stage driven lifecycle that ensures:
+Summit introduces a stage driven lifecycle that ensures:
 
 - Only the right opportunities progress  
 - The right data is captured at the right time  
@@ -52,7 +52,7 @@ Genesis Arc introduces a stage driven lifecycle that ensures:
 
 ---
 
-## The Genesis Arc in Practice
+## Summit in Practice
 
 <p align="center">
   <img src="images/GAGBL.png" alt="Genesis Arc Gated Business Lifecycle" width="900"/>

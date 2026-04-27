@@ -2,7 +2,7 @@
   <img src="images/JR%20Logo%2001%20New.png" alt="Jon Ryley Logo" width="120"/>
 </p>
 <p align="right">
-  <img src="images/Summit%logo%alpha.png.png" alt="Summit Logo" width="120"/>
+  <img src="images/Summit%20logo%20alpha.png.png" alt="Summit Logo" width="120"/>
 </p>
 
 # Summit  

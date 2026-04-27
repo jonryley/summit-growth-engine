@@ -74,7 +74,7 @@ Instead:
 
 ## What Changes
 
-With Genesis Arc in place:
+With Summit in place:
 
 - Pipeline becomes **credible, not inflated**  
 - CRM becomes a **decision engine, not a record system**  
@@ -99,4 +99,3 @@ With Genesis Arc in place:
 
 ---
 
-## The Lifecycle

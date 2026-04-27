@@ -1,6 +1,9 @@
 <p align="right">
   <img src="images/JR%20Logo%2001%20New.png" alt="Jon Ryley Logo" width="120"/>
 </p>
+<p align="right">
+  <img src="images/JR%20Logo%2001%20New.png" alt="Jon Ryley Logo" width="120"/>
+</p>
 
 # Summit  
 ## The Gated Business Lifecycle for Predictable, Scalable Growth

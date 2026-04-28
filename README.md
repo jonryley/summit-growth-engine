@@ -29,6 +29,16 @@ It replaces activity driven sales with structured execution, clear decision maki
 
 It ensures opportunities move based on evidence, not optimism.
 
+
+---
+
+## Explore Summit
+
+- [Pipeline Demo](index.html)
+- [Services](SERVICES.md)
+- [Operating Model](OPERATING-MODEL.md)
+- [Stage Definitions](stages/)
+
 ---
 
 ## Why Summit Exists

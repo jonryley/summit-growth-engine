@@ -66,6 +66,13 @@ Summit introduces a stage driven lifecycle that ensures:
 
 ---
 
+## License Summit
+
+Interested in applying Summit in your organisation?
+
+Contact:
+https://jonryley.com/contact
+
 ## Summit in Practice
 
 <p align="center">

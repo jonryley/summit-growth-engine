@@ -8,8 +8,8 @@
   <img src="images/Summit%20logo%20alpha.png" alt="Summit Logo" width="240"/>
 </p>
 
-# Summit  
-## The Gated Business Lifecycle for Predictable, Scalable Growth
+# Summit Growth Engine
+## Powered by the Gated Business Lifecycle
 ### A commercial operating system for predictable scalable growth.
 
 ---

@@ -4,7 +4,7 @@
   <img src="images/Summit%20logo%20alpha.png" alt="Summit Logo" width="240"/>
 </p>
 
-# Summit
+# Benefits of Summit 
 ## Turning Sales into a Scalable Growth Engine
 
 **High trust. High-quality data. High-speed execution.**

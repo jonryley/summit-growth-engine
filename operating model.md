@@ -7,8 +7,6 @@
 # Summit Operating Stack 
 ---
 
-The Summit Framework drives decisions.
-
 People
 Process
 CRM

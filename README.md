@@ -34,7 +34,7 @@ It ensures opportunities move based on evidence, not optimism.
 
 ## Explore Summit
 
-- - [Pipeline Demo](https://jonryley.github.io/GA-GBL-process/)
+- Pipeline Demo](https://jonryley.github.io/GA-GBL-process/)
 - [Services](SERVICES.md)
 - [Operating Model](OPERATING-MODEL.md)
 - [Stage Definitions](stages/)

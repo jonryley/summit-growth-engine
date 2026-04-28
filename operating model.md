@@ -9,6 +9,8 @@
 
 The Summit Framework drives decisions.
 
-Each stage is defined.  
-Each gate creates truth.  
-Each progression is earned
+People
+Process
+CRM
+AI
+Governance

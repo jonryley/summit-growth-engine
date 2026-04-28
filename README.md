@@ -9,7 +9,7 @@
 </p>
 
 # Summit Growth Engine
-## Powered by the Gated Business Lifecycle
+## Commercial operating system for predictable scalable growth.
 ### Structure for growth. Discipline for scale.
 
 ---

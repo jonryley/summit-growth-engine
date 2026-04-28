@@ -1,3 +1,6 @@
+![License: MIT](https://img.shields.io/badge/License-MIT-gold)
+![Framework](https://img.shields.io/badge/Framework-Summit-black)
+
 <p align="right">
   <img src="images/JR%20Logo%2001%20New.png" alt="Jon Ryley Logo" width="160"/>
 <p align="left">

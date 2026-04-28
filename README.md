@@ -10,7 +10,7 @@
 
 # Summit Growth Engine
 ## Powered by the Gated Business Lifecycle
-### Structure for growth-Discipline for scale.
+### Structure for growth. Discipline for scale.
 
 ---
 ##  Operating Stack
@@ -103,3 +103,4 @@ https://jonryley.com/contact
 ```mermaid
 flowchart LR
     A["Stage 0 Signal"] --> B["Stage 1 Qualify"] --> C["Stage 2 Value"] --> D["Stage 3 Convert"] --> E["Stage 4 Deliver"] --> F["Stage 5 Amplify"]
+```

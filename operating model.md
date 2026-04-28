@@ -6,3 +6,8 @@
 
 # Summit Operating Stack 
 
+People
+Process
+CRM
+AI
+Governance

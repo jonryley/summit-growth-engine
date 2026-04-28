@@ -5,9 +5,10 @@
 </p>
 
 # Summit Operating Stack 
+---
 
-People
-Process
-CRM
-AI
-Governance
+The Summit Framework drives decisions.
+
+Each stage is defined.  
+Each gate creates truth.  
+Each progression is earned

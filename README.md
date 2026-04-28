@@ -38,7 +38,7 @@ They have:
 - Poor alignment between sales and delivery  
 - Forecasts based on hope rather than evidence  
 
-Sumiit fixes this.
+Summit fixes this.
 
 ---
 

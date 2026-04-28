@@ -1,7 +1,7 @@
 <p align="right">
-  <a href="https://jonryley.com">
-    <img width="160" height="42" alt="JR Logo" src="https://github.com/user-attachments/assets/83065a1b-b33f-42eb-a8e2-303ee2db77f9" />
-  </a>
+  <img src="/images/JR%20Logo%2001%20New.png" alt="Jon Ryley Logo" width="160"/>
+<p align="left">
+  <img src="/images/Summit%20logo%20alpha.png" alt="Summit Logo" width="240"/>
 </p>
 
 # Summit Example  

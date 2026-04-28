@@ -13,9 +13,8 @@
 ### Structure for growth-Discipline for scale.
 
 ---
-## Summit Operating Stack
+##  Operating Stack
 
-text
 People → Process → CRM → Data → AI → Governance → Growth
 
 The Summit Framework drives decisions.

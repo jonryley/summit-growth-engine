@@ -25,6 +25,10 @@
 - next_step
 - next_step_date
 - close_plan_status
+- Opportunity Classification
+- Gate Readiness
+- Handover Readiness
+- Review Status
 
 ## Purpose
 

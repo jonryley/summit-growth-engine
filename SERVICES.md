@@ -111,6 +111,23 @@ Focus areas:
 
 ---
 
+## 7. Summit Operating Controls
+
+Design and implementation of the control layer that supports the Summit Growth Engine.
+
+Includes:
+
+- Quick Qualifier  
+- Gate Readiness Check  
+- Opportunity Classification  
+- Sales to Delivery Handover  
+- Monthly Growth Review  
+- Growth on a Page  
+
+This helps organisations move from process documentation to live commercial governance.
+
+---
+
 # What Summit Fixes
 
 Most organisations do not have a pipeline problem.

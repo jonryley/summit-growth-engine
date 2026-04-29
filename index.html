@@ -6,206 +6,42 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0b0b0b;
-  color: white;
-}
-
-.header {
-  padding: 15px 30px;
-  border-bottom: 1px solid #222;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.header-left {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.logo {
-  height: 40px;
-}
-
-.header h1 {
-  color: #d4af37;
-  margin: 0;
-  font-size: 20px;
-}
-
-.metrics {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.metric {
-  color: #d4af37;
-  font-size: 14px;
-}
-
-.container {
-  padding: 20px;
-}
-
-.filters {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-bottom: 18px;
-}
-
-.filter-group {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.filter-group label {
-  font-size: 12px;
-  color: #aaa;
-}
-
-.filter-group select {
-  background: #111;
-  color: #fff;
-  border: 1px solid #333;
-  padding: 8px 10px;
-  border-radius: 4px;
-}
-
-.pipeline {
-  display: flex;
-  gap: 15px;
-  overflow-x: auto;
-  align-items: flex-start;
-  padding-bottom: 10px;
-}
-
-.stage {
-  background: #111;
-  border: 1px solid #222;
-  min-width: 290px;
-  display: flex;
-  flex-direction: column;
-  border-radius: 6px;
-}
-
-.stage.drag-over {
-  border-color: #d4af37;
-  box-shadow: 0 0 0 1px #d4af37 inset;
-}
-
-.stage-header {
-  padding: 12px;
-  border-bottom: 1px solid #222;
-  background: #0f0f0f;
-  border-radius: 6px 6px 0 0;
-}
-
-.stage-title {
-  font-weight: bold;
-  color: #d4af37;
-}
-
-.stage-value {
-  font-size: 12px;
-  color: #888;
-  margin-top: 4px;
-}
-
-.stage-body {
-  padding: 10px;
-  min-height: 360px;
-}
-
-.card {
-  background: #1a1a1a;
-  border: 1px solid #333;
-  padding: 12px;
-  margin-bottom: 10px;
-  cursor: grab;
-  transition: all 0.2s;
-  border-radius: 4px;
-}
-
-.card:hover {
-  border-color: #d4af37;
-  transform: translateY(-2px);
-}
-
-.card.dragging {
-  opacity: 0.55;
-}
-
-.card.hidden {
-  display: none;
-}
-
-.card-title {
-  font-size: 14px;
-  margin-bottom: 6px;
-}
-
-.card-value {
-  font-size: 12px;
-  color: #aaa;
-  margin-bottom: 4px;
-}
-
-.card-date {
-  font-size: 12px;
-  color: #888;
-}
-
-.card-status {
-  font-size: 12px;
-  color: #d4af37;
-  margin-top: 4px;
-}
-
-.card-meta {
-  font-size: 11px;
-  color: #999;
-  margin-top: 6px;
-}
-
-.green { border-left: 4px solid #2ecc71; }
-.amber { border-left: 4px solid #f39c12; }
-.red { border-left: 4px solid #e74c3c; }
-
-.modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.9);
-  z-index: 1000;
-}
-
-.modal-content {
-  background: #111;
-  margin: 6% auto;
-  padding: 30px;
-  width: 90%;
-  max-width: 620px;
-  border: 1px solid #333;
-  border-radius: 6px;
-}
-
-.close {
-  float: right;
-  cursor: pointer;
-  color: #d4af37;
-  font-size: 18px;
-}
+body{margin:0;font-family:Arial,sans-serif;background:#0b0b0b;color:white}
+.header{padding:15px 30px;border-bottom:1px solid #222;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.header-left{display:flex;align-items:center;gap:15px}
+.logo{height:40px}
+.header h1{color:#d4af37;margin:0;font-size:20px}
+.metrics{display:flex;gap:20px;flex-wrap:wrap}
+.metric{color:#d4af37;font-size:14px}
+.container{padding:20px}
+.filters{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.filter-group{display:flex;flex-direction:column;gap:6px}
+.filter-group label{font-size:12px;color:#aaa}
+.filter-group select{background:#111;color:#fff;border:1px solid #333;padding:8px 10px;border-radius:4px}
+.pipeline{display:flex;gap:15px;overflow-x:auto;align-items:flex-start;padding-bottom:10px}
+.stage{background:#111;border:1px solid #222;min-width:310px;display:flex;flex-direction:column;border-radius:6px}
+.stage.drag-over{border-color:#d4af37;box-shadow:0 0 0 1px #d4af37 inset}
+.stage-header{padding:12px;border-bottom:1px solid #222;background:#0f0f0f;border-radius:6px 6px 0 0}
+.stage-title{font-weight:bold;color:#d4af37}
+.stage-value{font-size:12px;color:#888;margin-top:4px}
+.stage-body{padding:10px;min-height:360px}
+.card{background:#1a1a1a;border:1px solid #333;padding:12px;margin-bottom:10px;cursor:grab;transition:all .2s;border-radius:4px}
+.card:hover{border-color:#d4af37;transform:translateY(-2px)}
+.card.dragging{opacity:.55}
+.card.hidden{display:none}
+.card-title{font-size:14px;margin-bottom:6px}
+.card-value,.card-date,.card-status,.card-meta{font-size:12px}
+.card-value{color:#aaa;margin-bottom:4px}
+.card-date{color:#888}
+.card-status{color:#d4af37;margin-top:4px}
+.card-meta{color:#999;margin-top:6px;line-height:1.5}
+.green{border-left:4px solid #2ecc71}
+.amber{border-left:4px solid #f39c12}
+.red{border-left:4px solid #e74c3c}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:1000}
+.modal-content{background:#111;margin:6% auto;padding:30px;width:90%;max-width:680px;border:1px solid #333;border-radius:6px}
+.close{float:right;cursor:pointer;color:#d4af37;font-size:18px}
+a{color:#d4af37}
 </style>
 </head>
 
@@ -216,7 +52,7 @@ body {
     <img src="images/JR%20LOGO%20white.png" class="logo" alt="JR Logo">
     <div>
       <h1>Summit Pipeline</h1>
-      <div style="color:#888; font-size:13px;">Gated Business Lifecycle</div>
+      <div style="color:#888;font-size:13px;">Gated Business Lifecycle</div>
     </div>
   </div>
 
@@ -233,284 +69,25 @@ body {
       <label for="sectorFilter">Sector</label>
       <select id="sectorFilter">
         <option value="All">All</option>
-        <option value="Construction">Construction</option>
+        <option value="Rail">Rail</option>
         <option value="Energy">Energy</option>
-        <option value="Infrastructure">Infrastructure</option>
       </select>
     </div>
 
     <div class="filter-group">
-      <label for="typeFilter">Opportunity Type</label>
-      <select id="typeFilter">
+      <label for="classificationFilter">Classification</label>
+      <select id="classificationFilter">
         <option value="All">All</option>
-        <option value="CRM">CRM</option>
-        <option value="GBL License">GBL License</option>
-        <option value="Consultancy">Consultancy</option>
+        <option value="Lite">Lite</option>
+        <option value="Standard">Standard</option>
+        <option value="Strategic">Strategic</option>
+        <option value="Complex">Complex</option>
+        <option value="Transformational">Transformational</option>
       </select>
     </div>
   </div>
 
-  <div class="pipeline">
-
-    <!-- SIGNAL -->
-    <div class="stage" data-stage="Signal" data-weight="0.10" data-url="https://github.com/jonryley/GA-GBL-process/blob/main/stages/stage-0-signal.md" data-status="Opportunity identified">
-      <div class="stage-header">
-        <div class="stage-title">Signal</div>
-        <div class="stage-value" id="signalTotal"></div>
-      </div>
-      <div class="stage-body">
-
-        <div class="card amber" draggable="true" data-sector="Construction" data-type="CRM" data-value="350000" data-close="30 Jun 2026">
-          <div class="card-title">Balfour Beatty — CRM</div>
-          <div class="card-value">£350k</div>
-          <div class="card-date">Close: 30 Jun 2026</div>
-          <div class="card-status">Status: Opportunity identified</div>
-          <div class="card-meta">Construction | CRM</div>
-        </div>
-
-        <div class="card amber" draggable="true" data-sector="Construction" data-type="Consultancy" data-value="420000" data-close="15 Jul 2026">
-          <div class="card-title">Barratt Redrow — Consultancy</div>
-          <div class="card-value">£420k</div>
-          <div class="card-date">Close: 15 Jul 2026</div>
-          <div class="card-status">Status: Opportunity identified</div>
-          <div class="card-meta">Construction | Consultancy</div>
-        </div>
-
-        <div class="card amber" draggable="true" data-sector="Energy" data-type="GBL License" data-value="500000" data-close="01 Aug 2026">
-          <div class="card-title">SSE — GBL License</div>
-          <div class="card-value">£500k</div>
-          <div class="card-date">Close: 01 Aug 2026</div>
-          <div class="card-status">Status: Opportunity identified</div>
-          <div class="card-meta">Energy | GBL License</div>
-        </div>
-
-        <div class="card amber" draggable="true" data-sector="Infrastructure" data-type="CRM" data-value="375000" data-close="12 Aug 2026">
-          <div class="card-title">National Grid — CRM</div>
-          <div class="card-value">£375k</div>
-          <div class="card-date">Close: 12 Aug 2026</div>
-          <div class="card-status">Status: Opportunity identified</div>
-          <div class="card-meta">Infrastructure | CRM</div>
-        </div>
-
-        <div class="card amber" draggable="true" data-sector="Infrastructure" data-type="Consultancy" data-value="300000" data-close="20 Aug 2026">
-          <div class="card-title">Severn Trent — Consultancy</div>
-          <div class="card-value">£300k</div>
-          <div class="card-date">Close: 20 Aug 2026</div>
-          <div class="card-status">Status: Opportunity identified</div>
-          <div class="card-meta">Infrastructure | Consultancy</div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- QUALIFY -->
-    <div class="stage" data-stage="Qualify" data-weight="0.25" data-url="https://github.com/jonryley/GA-GBL-process/blob/main/stages/stage-1-qualify.md" data-status="In qualification">
-      <div class="stage-header">
-        <div class="stage-title">Qualify</div>
-        <div class="stage-value" id="qualifyTotal"></div>
-      </div>
-      <div class="stage-body">
-
-        <div class="card green" draggable="true" data-sector="Construction" data-type="GBL License" data-value="850000" data-close="20 Jul 2026">
-          <div class="card-title">Vistry — GBL License</div>
-          <div class="card-value">£850k</div>
-          <div class="card-date">Close: 20 Jul 2026</div>
-          <div class="card-status">Status: In qualification</div>
-          <div class="card-meta">Construction | GBL License</div>
-        </div>
-
-        <div class="card amber" draggable="true" data-sector="Construction" data-type="CRM" data-value="950000" data-close="10 Aug 2026">
-          <div class="card-title">Taylor Wimpey — CRM</div>
-          <div class="card-value">£950k</div>
-          <div class="card-date">Close: 10 Aug 2026</div>
-          <div class="card-status">Status: In qualification</div>
-          <div class="card-meta">Construction | CRM</div>
-        </div>
-
-        <div class="card green" draggable="true" data-sector="Energy" data-type="Consultancy" data-value="1200000" data-close="25 Aug 2026">
-          <div class="card-title">Centrica — Consultancy</div>
-          <div class="card-value">£1.2M</div>
-          <div class="card-date">Close: 25 Aug 2026</div>
-          <div class="card-status">Status: In qualification</div>
-          <div class="card-meta">Energy | Consultancy</div>
-        </div>
-
-        <div class="card amber" draggable="true" data-sector="Infrastructure" data-type="GBL License" data-value="1050000" data-close="05 Sep 2026">
-          <div class="card-title">United Utilities — GBL License</div>
-          <div class="card-value">£1.05M</div>
-          <div class="card-date">Close: 05 Sep 2026</div>
-          <div class="card-status">Status: In qualification</div>
-          <div class="card-meta">Infrastructure | GBL License</div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- VALUE -->
-    <div class="stage" data-stage="Value" data-weight="0.50" data-url="https://github.com/jonryley/GA-GBL-process/blob/main/stages/stage-2-value.md" data-status="Value defined">
-      <div class="stage-header">
-        <div class="stage-title">Value</div>
-        <div class="stage-value" id="valueTotal"></div>
-      </div>
-      <div class="stage-body">
-
-        <div class="card green" draggable="true" data-sector="Construction" data-type="Consultancy" data-value="1500000" data-close="15 Sep 2026">
-          <div class="card-title">Balfour Beatty — Consultancy</div>
-          <div class="card-value">£1.5M</div>
-          <div class="card-date">Close: 15 Sep 2026</div>
-          <div class="card-status">Status: Value defined</div>
-          <div class="card-meta">Construction | Consultancy</div>
-        </div>
-
-        <div class="card green" draggable="true" data-sector="Energy" data-type="CRM" data-value="1800000" data-close="30 Sep 2026">
-          <div class="card-title">Drax — CRM</div>
-          <div class="card-value">£1.8M</div>
-          <div class="card-date">Close: 30 Sep 2026</div>
-          <div class="card-status">Status: Value defined</div>
-          <div class="card-meta">Energy | CRM</div>
-        </div>
-
-        <div class="card amber" draggable="true" data-sector="Infrastructure" data-type="Consultancy" data-value="1300000" data-close="10 Oct 2026">
-          <div class="card-title">National Grid — Consultancy</div>
-          <div class="card-value">£1.3M</div>
-          <div class="card-date">Close: 10 Oct 2026</div>
-          <div class="card-status">Status: Value defined</div>
-          <div class="card-meta">Infrastructure | Consultancy</div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- CONVERT -->
-    <div class="stage" data-stage="Convert" data-weight="0.75" data-url="https://github.com/jonryley/GA-GBL-process/blob/main/stages/stage-3-convert.md" data-status="Proposal & close">
-      <div class="stage-header">
-        <div class="stage-title">Convert</div>
-        <div class="stage-value" id="convertTotal"></div>
-      </div>
-      <div class="stage-body">
-
-        <div class="card amber" draggable="true" data-sector="Construction" data-type="CRM" data-value="900000" data-close="31 Jul 2026">
-          <div class="card-title">Persimmon — CRM</div>
-          <div class="card-value">£900k</div>
-          <div class="card-date">Close: 31 Jul 2026</div>
-          <div class="card-status">Status: Proposal & close</div>
-          <div class="card-meta">Construction | CRM</div>
-        </div>
-
-        <div class="card green" draggable="true" data-sector="Energy" data-type="GBL License" data-value="1100000" data-close="15 Aug 2026">
-          <div class="card-title">SSE — GBL License</div>
-          <div class="card-value">£1.1M</div>
-          <div class="card-date">Close: 15 Aug 2026</div>
-          <div class="card-status">Status: Proposal & close</div>
-          <div class="card-meta">Energy | GBL License</div>
-        </div>
-
-        <div class="card amber" draggable="true" data-sector="Infrastructure" data-type="CRM" data-value="850000" data-close="01 Sep 2026">
-          <div class="card-title">United Utilities — CRM</div>
-          <div class="card-value">£850k</div>
-          <div class="card-date">Close: 01 Sep 2026</div>
-          <div class="card-status">Status: Proposal & close</div>
-          <div class="card-meta">Infrastructure | CRM</div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- DELIVER -->
-    <div class="stage" data-stage="Deliver" data-weight="1.00" data-url="https://github.com/jonryley/GA-GBL-process/blob/main/stages/stage-4-deliver.md" data-status="In delivery">
-      <div class="stage-header">
-        <div class="stage-title">Deliver</div>
-        <div class="stage-value" id="deliverTotal"></div>
-      </div>
-      <div class="stage-body">
-
-        <div class="card green" draggable="true" data-sector="Construction" data-type="CRM" data-value="2000000" data-close="30 Sep 2026">
-          <div class="card-title">Balfour Beatty — CRM</div>
-          <div class="card-value">£2.0M</div>
-          <div class="card-date">Close: 30 Sep 2026</div>
-          <div class="card-status">Status: In delivery</div>
-          <div class="card-meta">Construction | CRM</div>
-        </div>
-
-        <div class="card green" draggable="true" data-sector="Construction" data-type="GBL License" data-value="1700000" data-close="10 Oct 2026">
-          <div class="card-title">Vistry — GBL License</div>
-          <div class="card-value">£1.7M</div>
-          <div class="card-date">Close: 10 Oct 2026</div>
-          <div class="card-status">Status: In delivery</div>
-          <div class="card-meta">Construction | GBL License</div>
-        </div>
-
-        <div class="card green" draggable="true" data-sector="Energy" data-type="Consultancy" data-value="2500000" data-close="30 Oct 2026">
-          <div class="card-title">Centrica — Consultancy</div>
-          <div class="card-value">£2.5M</div>
-          <div class="card-date">Close: 30 Oct 2026</div>
-          <div class="card-status">Status: In delivery</div>
-          <div class="card-meta">Energy | Consultancy</div>
-        </div>
-
-        <div class="card green" draggable="true" data-sector="Energy" data-type="CRM" data-value="2200000" data-close="05 Nov 2026">
-          <div class="card-title">Drax — CRM</div>
-          <div class="card-value">£2.2M</div>
-          <div class="card-date">Close: 05 Nov 2026</div>
-          <div class="card-status">Status: In delivery</div>
-          <div class="card-meta">Energy | CRM</div>
-        </div>
-
-        <div class="card green" draggable="true" data-sector="Infrastructure" data-type="Consultancy" data-value="1600000" data-close="15 Nov 2026">
-          <div class="card-title">Severn Trent — Consultancy</div>
-          <div class="card-value">£1.6M</div>
-          <div class="card-date">Close: 15 Nov 2026</div>
-          <div class="card-status">Status: In delivery</div>
-          <div class="card-meta">Infrastructure | Consultancy</div>
-        </div>
-
-        <div class="card green" draggable="true" data-sector="Infrastructure" data-type="GBL License" data-value="1800000" data-close="25 Nov 2026">
-          <div class="card-title">National Grid — GBL License</div>
-          <div class="card-value">£1.8M</div>
-          <div class="card-date">Close: 25 Nov 2026</div>
-          <div class="card-status">Status: In delivery</div>
-          <div class="card-meta">Infrastructure | GBL License</div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- AMPLIFY -->
-    <div class="stage" data-stage="Amplify" data-weight="1.00" data-url="https://github.com/jonryley/GA-GBL-process/blob/main/stages/stage-5-amplify.md" data-status="Scaling">
-      <div class="stage-header">
-        <div class="stage-title">Amplify</div>
-        <div class="stage-value" id="amplifyTotal"></div>
-      </div>
-      <div class="stage-body">
-
-        <div class="card green" draggable="true" data-sector="Construction" data-type="Consultancy" data-value="3000000" data-close="31 Dec 2026">
-          <div class="card-title">Barratt Redrow — Consultancy</div>
-          <div class="card-value">£3.0M+</div>
-          <div class="card-date">Close: 31 Dec 2026</div>
-          <div class="card-status">Status: Scaling</div>
-          <div class="card-meta">Construction | Consultancy</div>
-        </div>
-
-        <div class="card green" draggable="true" data-sector="Energy" data-type="GBL License" data-value="4000000" data-close="31 Dec 2026">
-          <div class="card-title">SSE — GBL License</div>
-          <div class="card-value">£4.0M+</div>
-          <div class="card-date">Close: 31 Dec 2026</div>
-          <div class="card-status">Status: Scaling</div>
-          <div class="card-meta">Energy | GBL License</div>
-        </div>
-
-        <div class="card green" draggable="true" data-sector="Infrastructure" data-type="CRM" data-value="3500000" data-close="31 Dec 2026">
-          <div class="card-title">United Utilities — CRM</div>
-          <div class="card-value">£3.5M+</div>
-          <div class="card-date">Close: 31 Dec 2026</div>
-          <div class="card-status">Status: Scaling</div>
-          <div class="card-meta">Infrastructure | CRM</div>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
+  <div class="pipeline" id="pipeline"></div>
 </div>
 
 <div id="modal" class="modal">
@@ -519,64 +96,213 @@ body {
 
     <h2 id="title"></h2>
     <p><strong>Value:</strong> <span id="value"></span></p>
-    <p><strong>Status:</strong> <span id="status"></span></p>
+    <p><strong>Sector:</strong> <span id="sector"></span></p>
+    <p><strong>Classification:</strong> <span id="classification"></span></p>
+    <p><strong>Stage Status:</strong> <span id="status"></span></p>
+    <p><strong>Gate Readiness:</strong> <span id="gateReadiness"></span></p>
+    <p><strong>Handover:</strong> <span id="handover"></span></p>
+    <p><strong>Review Status:</strong> <span id="reviewStatus"></span></p>
     <p><strong>Next Step:</strong> <span id="next"></span></p>
     <p><strong>Close Date:</strong> <span id="closeDate"></span></p>
-    <p><strong>Sector:</strong> <span id="sector"></span></p>
-    <p><strong>Offer Type:</strong> <span id="offerType"></span></p>
 
     <br>
 
-    <a id="stageLink" href="#" target="_blank" style="color:#d4af37;">
-      View Stage Definition
-    </a>
+    <a id="stageLink" href="#" target="_blank">View Stage Definition</a>
+    <br><br>
+    <a id="gateLink" href="#" target="_blank">View Gate</a>
   </div>
 </div>
 
 <script>
 let draggedCard = null;
 
-function getStageMetaFromCard(card) {
-  const stage = card.closest('.stage');
-  return {
-    stageName: stage.getAttribute('data-stage'),
-    stageUrl: stage.getAttribute('data-url'),
-    stageStatus: stage.getAttribute('data-status')
-  };
+const stages = [
+  {
+    name: "Signal",
+    weight: 0.10,
+    status: "Opportunity identified",
+    stageUrl: "stages/stage-0-signal.md",
+    gateUrl: "gates/gate-0-signal.md"
+  },
+  {
+    name: "Qualify",
+    weight: 0.25,
+    status: "In qualification",
+    stageUrl: "stages/stage-1-qualify.md",
+    gateUrl: "gates/gate-1-qualify.md"
+  },
+  {
+    name: "Value",
+    weight: 0.50,
+    status: "Value defined",
+    stageUrl: "stages/stage-2-value.md",
+    gateUrl: "gates/gate-2-value.md"
+  },
+  {
+    name: "Convert",
+    weight: 0.75,
+    status: "Proposal and close",
+    stageUrl: "stages/stage-3-convert.md",
+    gateUrl: "gates/gate-3-convert.md"
+  },
+  {
+    name: "Deliver",
+    weight: 1.00,
+    status: "In delivery",
+    stageUrl: "stages/stage-4-deliver.md",
+    gateUrl: "gates/gate-4-deliver.md"
+  },
+  {
+    name: "Amplify",
+    weight: 1.00,
+    status: "Scaling",
+    stageUrl: "stages/stage-5-amplify.md",
+    gateUrl: "gates/gate-5-amplify.md"
+  }
+];
+
+const opportunities = [
+  ["Signal","Metro Rail","Rail",350000,"Strategic","Pass","In Progress","On Track","30 Jun 2026","amber"],
+  ["Signal","Moores Energy","Energy",420000,"Strategic","Pass","In Progress","On Track","15 Jul 2026","amber"],
+  ["Signal","Northern Grid Energy","Energy",500000,"Strategic","Pass","In Progress","On Track","01 Aug 2026","amber"],
+  ["Signal","Crown Rail Systems","Rail",375000,"Strategic","Pass","In Progress","On Track","12 Aug 2026","amber"],
+
+  ["Qualify","Summit Rail Partners","Rail",850000,"Complex","Pass","In Progress","On Track","20 Jul 2026","green"],
+  ["Qualify","Beacon Energy Group","Energy",950000,"Complex","Pass","In Progress","On Track","10 Aug 2026","amber"],
+  ["Qualify","Apex Energy Services","Energy",1200000,"Complex","Pass","In Progress","Watch","25 Aug 2026","green"],
+  ["Qualify","Platform Rail Alliance","Rail",1050000,"Complex","Pass","In Progress","On Track","05 Sep 2026","amber"],
+
+  ["Value","Pioneer Rail","Rail",1500000,"Complex","Pass","In Progress","On Track","15 Sep 2026","green"],
+  ["Value","Dunstone Energy","Energy",1800000,"Transformational","Pass","In Progress","On Track","30 Sep 2026","green"],
+  ["Value","Harbour Rail","Rail",1300000,"Complex","Pass","In Progress","Watch","10 Oct 2026","amber"],
+  ["Value","Lumen Energy Lite","Energy",50000,"Lite","Pass","Not Started","On Track","18 Oct 2026","green"],
+  ["Value","Bridgeway Rail Lite","Rail",50000,"Lite","Pass","Not Started","On Track","22 Oct 2026","green"],
+
+  ["Convert","Westline Rail","Rail",900000,"Complex","Pass","In Progress","On Track","31 Jul 2026","amber"],
+  ["Convert","Orion Energy","Energy",1100000,"Complex","Pass","In Progress","On Track","15 Aug 2026","green"],
+  ["Convert","MetroLink Rail","Rail",850000,"Complex","Pass","In Progress","Watch","01 Sep 2026","amber"],
+
+  ["Deliver","Keystone Rail","Rail",2000000,"Transformational","Pass","In Progress","On Track","30 Sep 2026","green"],
+  ["Deliver","Atlas Energy","Energy",1700000,"Transformational","Pass","In Progress","On Track","10 Oct 2026","green"],
+  ["Deliver","Sovereign Energy","Energy",2500000,"Transformational","Pass","In Progress","On Track","30 Oct 2026","green"],
+  ["Deliver","Northstar Rail","Rail",2200000,"Transformational","Pass","In Progress","On Track","05 Nov 2026","green"],
+  ["Deliver","Peak Energy Lite","Energy",50000,"Lite","Pass","Not Started","On Track","12 Nov 2026","green"],
+  ["Deliver","Signal Rail Lite","Rail",50000,"Lite","Pass","Not Started","On Track","15 Nov 2026","green"],
+
+  ["Amplify","Vanguard Rail","Rail",3000000,"Transformational","Pass","Complete","On Track","31 Dec 2026","green"],
+  ["Amplify","Titan Energy","Energy",4000000,"Transformational","Pass","Complete","On Track","31 Dec 2026","green"],
+  ["Amplify","National Rail Growth","Rail",3500000,"Transformational","Pass","Complete","On Track","31 Dec 2026","green"],
+  ["Amplify","Moores Energy Lite","Energy",50000,"Lite","Pass","Complete","On Track","31 Dec 2026","green"],
+  ["Amplify","Metro Rail Lite","Rail",50000,"Lite","Pass","Complete","On Track","31 Dec 2026","green"]
+];
+
+function formatMoney(value) {
+  if (value >= 1000000) return "£" + (value / 1000000).toFixed(1) + "M";
+  return "£" + value.toLocaleString();
 }
 
 function getNextStepByStage(stageName) {
   const map = {
-    "Signal": "Engage stakeholders",
-    "Qualify": "Complete qualification",
-    "Value": "Build proposal",
-    "Convert": "Close plan",
-    "Deliver": "Expand engagement",
-    "Amplify": "Scale across business"
+    "Signal": "Confirm signal and identify stakeholders",
+    "Qualify": "Complete qualification gate",
+    "Value": "Define value case and commercial outcome",
+    "Convert": "Agree close plan and proposal route",
+    "Deliver": "Move into structured delivery handover",
+    "Amplify": "Scale across accounts, sectors or business units"
   };
   return map[stageName] || "Review next step";
 }
 
+function renderPipeline() {
+  const pipeline = document.getElementById("pipeline");
+  pipeline.innerHTML = "";
+
+  stages.forEach(stage => {
+    const stageEl = document.createElement("div");
+    stageEl.className = "stage";
+    stageEl.dataset.stage = stage.name;
+    stageEl.dataset.weight = stage.weight;
+    stageEl.dataset.status = stage.status;
+    stageEl.dataset.stageUrl = stage.stageUrl;
+    stageEl.dataset.gateUrl = stage.gateUrl;
+
+    stageEl.innerHTML = `
+      <div class="stage-header">
+        <div class="stage-title">${stage.name}</div>
+        <div class="stage-value" id="${stage.name.toLowerCase()}Total"></div>
+      </div>
+      <div class="stage-body"></div>
+    `;
+
+    const body = stageEl.querySelector(".stage-body");
+
+    opportunities
+      .filter(o => o[0] === stage.name)
+      .forEach(o => {
+        const [stageName,title,sector,value,classification,gateReadiness,handover,reviewStatus,closeDate,colour] = o;
+
+        const card = document.createElement("div");
+        card.className = `card ${colour}`;
+        card.draggable = true;
+        card.dataset.sector = sector;
+        card.dataset.value = value;
+        card.dataset.classification = classification;
+        card.dataset.gateReadiness = gateReadiness;
+        card.dataset.handover = handover;
+        card.dataset.reviewStatus = reviewStatus;
+        card.dataset.close = closeDate;
+
+        card.innerHTML = `
+          <div class="card-title">${title}</div>
+          <div class="card-value">${formatMoney(value)}</div>
+          <div class="card-date">Close: ${closeDate}</div>
+          <div class="card-status">Status: ${stage.status}</div>
+          <div class="card-meta">
+            Sector: ${sector}<br>
+            Classification: ${classification}<br>
+            Gate Readiness: ${gateReadiness}<br>
+            Handover: ${handover}<br>
+            Review Status: ${reviewStatus}
+          </div>
+        `;
+
+        body.appendChild(card);
+      });
+
+    pipeline.appendChild(stageEl);
+  });
+
+  bindDragAndDrop();
+  bindCardEvents();
+  calculatePipeline();
+}
+
+function getStageMetaFromCard(card) {
+  const stage = card.closest(".stage");
+  return {
+    stageName: stage.dataset.stage,
+    stageUrl: stage.dataset.stageUrl,
+    gateUrl: stage.dataset.gateUrl,
+    stageStatus: stage.dataset.status
+  };
+}
+
 function openModalFromCard(card) {
   const meta = getStageMetaFromCard(card);
-  const title = card.querySelector('.card-title').innerText;
-  const value = card.querySelector('.card-value').innerText;
-  const closeDate = card.getAttribute('data-close');
-  const status = meta.stageStatus;
-  const next = getNextStepByStage(meta.stageName);
-  const stageUrl = meta.stageUrl;
-  const sector = card.getAttribute('data-sector');
-  const type = card.getAttribute('data-type');
 
   document.getElementById("modal").style.display = "block";
-  document.getElementById("title").innerText = title;
-  document.getElementById("value").innerText = value;
-  document.getElementById("status").innerText = status;
-  document.getElementById("next").innerText = next;
-  document.getElementById("closeDate").innerText = closeDate;
-  document.getElementById("sector").innerText = sector;
-  document.getElementById("offerType").innerText = type;
-  document.getElementById("stageLink").href = stageUrl;
+  document.getElementById("title").innerText = card.querySelector(".card-title").innerText;
+  document.getElementById("value").innerText = card.querySelector(".card-value").innerText;
+  document.getElementById("sector").innerText = card.dataset.sector;
+  document.getElementById("classification").innerText = card.dataset.classification;
+  document.getElementById("status").innerText = meta.stageStatus;
+  document.getElementById("gateReadiness").innerText = card.dataset.gateReadiness;
+  document.getElementById("handover").innerText = card.dataset.handover;
+  document.getElementById("reviewStatus").innerText = card.dataset.reviewStatus;
+  document.getElementById("next").innerText = getNextStepByStage(meta.stageName);
+  document.getElementById("closeDate").innerText = card.dataset.close;
+  document.getElementById("stageLink").href = meta.stageUrl;
+  document.getElementById("gateLink").href = meta.gateUrl;
 }
 
 function closeModal() {
@@ -584,12 +310,9 @@ function closeModal() {
 }
 
 function refreshCardStatuses() {
-  document.querySelectorAll('.card').forEach(card => {
+  document.querySelectorAll(".card").forEach(card => {
     const meta = getStageMetaFromCard(card);
-    const statusEl = card.querySelector('.card-status');
-    if (statusEl) {
-      statusEl.innerText = "Status: " + meta.stageStatus;
-    }
+    card.querySelector(".card-status").innerText = "Status: " + meta.stageStatus;
   });
 }
 
@@ -597,13 +320,13 @@ function calculatePipeline() {
   let total = 0;
   let weighted = 0;
 
-  document.querySelectorAll('.stage').forEach(stage => {
-    const stageName = stage.querySelector('.stage-title').innerText.toLowerCase();
-    const stageWeight = parseFloat(stage.getAttribute('data-weight')) || 0;
+  document.querySelectorAll(".stage").forEach(stage => {
+    const stageName = stage.dataset.stage.toLowerCase();
+    const stageWeight = parseFloat(stage.dataset.weight) || 0;
     let stageTotal = 0;
 
-    stage.querySelectorAll('.card:not(.hidden)').forEach(card => {
-      const val = parseFloat(card.getAttribute('data-value'));
+    stage.querySelectorAll(".card:not(.hidden)").forEach(card => {
+      const val = parseFloat(card.dataset.value);
       if (!isNaN(val)) {
         total += val;
         stageTotal += val;
@@ -612,85 +335,71 @@ function calculatePipeline() {
     });
 
     const totalElement = document.getElementById(stageName + "Total");
-    if (totalElement) {
-      totalElement.innerText = "£" + stageTotal.toLocaleString();
-    }
+    if (totalElement) totalElement.innerText = "£" + stageTotal.toLocaleString();
   });
 
-  document.getElementById('totalPipeline').innerText =
-    "Total Pipeline: £" + total.toLocaleString();
-
-  document.getElementById('weightedPipeline').innerText =
-    "Weighted Pipeline: £" + Math.round(weighted).toLocaleString();
+  document.getElementById("totalPipeline").innerText = "Total Pipeline: £" + total.toLocaleString();
+  document.getElementById("weightedPipeline").innerText = "Weighted Pipeline: £" + Math.round(weighted).toLocaleString();
 }
 
 function applyFilters() {
-  const sectorFilter = document.getElementById('sectorFilter').value;
-  const typeFilter = document.getElementById('typeFilter').value;
+  const sectorFilter = document.getElementById("sectorFilter").value;
+  const classificationFilter = document.getElementById("classificationFilter").value;
 
-  document.querySelectorAll('.card').forEach(card => {
-    const sector = card.getAttribute('data-sector');
-    const type = card.getAttribute('data-type');
+  document.querySelectorAll(".card").forEach(card => {
+    const sectorMatch = sectorFilter === "All" || card.dataset.sector === sectorFilter;
+    const classMatch = classificationFilter === "All" || card.dataset.classification === classificationFilter;
 
-    const sectorMatch = sectorFilter === 'All' || sector === sectorFilter;
-    const typeMatch = typeFilter === 'All' || type === typeFilter;
-
-    if (sectorMatch && typeMatch) {
-      card.classList.remove('hidden');
-    } else {
-      card.classList.add('hidden');
-    }
+    card.classList.toggle("hidden", !(sectorMatch && classMatch));
   });
 
   calculatePipeline();
 }
 
 function bindCardEvents() {
-  document.querySelectorAll('.card').forEach(card => {
+  document.querySelectorAll(".card").forEach(card => {
     card.onclick = () => openModalFromCard(card);
 
-    card.addEventListener('dragstart', () => {
+    card.addEventListener("dragstart", () => {
       draggedCard = card;
-      card.classList.add('dragging');
+      card.classList.add("dragging");
     });
 
-    card.addEventListener('dragend', () => {
-      card.classList.remove('dragging');
+    card.addEventListener("dragend", () => {
+      card.classList.remove("dragging");
       draggedCard = null;
-      document.querySelectorAll('.stage').forEach(stage => stage.classList.remove('drag-over'));
+      document.querySelectorAll(".stage").forEach(stage => stage.classList.remove("drag-over"));
       refreshCardStatuses();
       calculatePipeline();
     });
   });
 }
 
-document.querySelectorAll('.stage-body').forEach(stageBody => {
-  stageBody.addEventListener('dragover', e => {
-    e.preventDefault();
-    stageBody.parentElement.classList.add('drag-over');
+function bindDragAndDrop() {
+  document.querySelectorAll(".stage-body").forEach(stageBody => {
+    stageBody.addEventListener("dragover", e => {
+      e.preventDefault();
+      stageBody.parentElement.classList.add("drag-over");
+    });
+
+    stageBody.addEventListener("dragleave", () => {
+      stageBody.parentElement.classList.remove("drag-over");
+    });
+
+    stageBody.addEventListener("drop", e => {
+      e.preventDefault();
+      if (draggedCard) stageBody.appendChild(draggedCard);
+      stageBody.parentElement.classList.remove("drag-over");
+      refreshCardStatuses();
+      calculatePipeline();
+    });
   });
+}
 
-  stageBody.addEventListener('dragleave', () => {
-    stageBody.parentElement.classList.remove('drag-over');
-  });
+document.getElementById("sectorFilter").addEventListener("change", applyFilters);
+document.getElementById("classificationFilter").addEventListener("change", applyFilters);
 
-  stageBody.addEventListener('drop', e => {
-    e.preventDefault();
-    if (draggedCard) {
-      stageBody.appendChild(draggedCard);
-    }
-    stageBody.parentElement.classList.remove('drag-over');
-    refreshCardStatuses();
-    calculatePipeline();
-  });
-});
-
-document.getElementById('sectorFilter').addEventListener('change', applyFilters);
-document.getElementById('typeFilter').addEventListener('change', applyFilters);
-
-bindCardEvents();
-refreshCardStatuses();
-calculatePipeline();
+renderPipeline();
 </script>
 
 </body>

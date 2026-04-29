@@ -27,6 +27,7 @@ Data
 AI
 ↓
 Governance
+↓Cadence
 ↓
 Growth
 ```

@@ -30,6 +30,7 @@ body{margin:0;font-family:Arial,sans-serif;background:#0b0b0b;color:white}
 .card.dragging{opacity:.55}
 .card.hidden{display:none}
 .card-title{font-weight:bold;margin-bottom:6px;font-size:14px}
+.tag{color:#d4af37;font-weight:normal}
 .card-value,.card-date,.card-status,.card-meta{font-size:12px}
 .card-value{color:#aaa}
 .card-date{color:#888}
@@ -101,6 +102,7 @@ a{color:#d4af37}
     <p><strong>Status:</strong> <span id="status"></span></p>
     <p><strong>Sector:</strong> <span id="sector"></span></p>
     <p><strong>Classification:</strong> <span id="classification"></span></p>
+    <p><strong>Offer:</strong> <span id="offerType"></span></p>
 
     <hr style="border:0;border-top:1px solid #333;margin:20px 0;">
 
@@ -121,83 +123,47 @@ a{color:#d4af37}
 let draggedCard = null;
 
 const stages = [
-  {
-    name: "Signal",
-    weight: 0.10,
-    status: "Opportunity identified",
-    stageUrl: "https://github.com/jonryley/summit-growth-engine/blob/main/stages/stage-0-signal.md",
-    gateUrl: "https://github.com/jonryley/summit-growth-engine/blob/main/gates/gate-0-signal-check.md"
-  },
-  {
-    name: "Qualify",
-    weight: 0.25,
-    status: "In qualification",
-    stageUrl: "https://github.com/jonryley/summit-growth-engine/blob/main/stages/stage-1-qualify.md",
-    gateUrl: "https://github.com/jonryley/summit-growth-engine/blob/main/gates/gate-1-qualification-gate.md"
-  },
-  {
-    name: "Value",
-    weight: 0.50,
-    status: "Value defined",
-    stageUrl: "https://github.com/jonryley/summit-growth-engine/blob/main/stages/stage-2-value.md",
-    gateUrl: "https://github.com/jonryley/summit-growth-engine/blob/main/gates/gate-2-value-gate.md"
-  },
-  {
-    name: "Convert",
-    weight: 0.75,
-    status: "Proposal and close",
-    stageUrl: "https://github.com/jonryley/summit-growth-engine/blob/main/stages/stage-3-convert.md",
-    gateUrl: "https://github.com/jonryley/summit-growth-engine/blob/main/gates/gate-3-conversion-gate.md"
-  },
-  {
-    name: "Deliver",
-    weight: 1.00,
-    status: "In delivery",
-    stageUrl: "https://github.com/jonryley/summit-growth-engine/blob/main/stages/stage-4-deliver.md",
-    gateUrl: "https://github.com/jonryley/summit-growth-engine/blob/main/gates/gate-4-delivery-readiness-gate.md"
-  },
-  {
-    name: "Amplify",
-    weight: 1.00,
-    status: "Scaling",
-    stageUrl: "https://github.com/jonryley/summit-growth-engine/blob/main/stages/stage-5-amplify.md",
-    gateUrl: "https://github.com/jonryley/summit-growth-engine/blob/main/gates/gate-5-growth-gate.md"
-  }
+  {name:"Signal",weight:0.10,status:"Opportunity identified",stageUrl:"https://github.com/jonryley/summit-growth-engine/blob/main/stages/stage-0-signal.md",gateUrl:"https://github.com/jonryley/summit-growth-engine/blob/main/gates/gate-0-signal-check.md"},
+  {name:"Qualify",weight:0.25,status:"In qualification",stageUrl:"https://github.com/jonryley/summit-growth-engine/blob/main/stages/stage-1-qualify.md",gateUrl:"https://github.com/jonryley/summit-growth-engine/blob/main/gates/gate-1-qualification-gate.md"},
+  {name:"Value",weight:0.50,status:"Value defined",stageUrl:"https://github.com/jonryley/summit-growth-engine/blob/main/stages/stage-2-value.md",gateUrl:"https://github.com/jonryley/summit-growth-engine/blob/main/gates/gate-2-value-gate.md"},
+  {name:"Convert",weight:0.75,status:"Proposal and close",stageUrl:"https://github.com/jonryley/summit-growth-engine/blob/main/stages/stage-3-convert.md",gateUrl:"https://github.com/jonryley/summit-growth-engine/blob/main/gates/gate-3-conversion-gate.md"},
+  {name:"Deliver",weight:1.00,status:"In delivery",stageUrl:"https://github.com/jonryley/summit-growth-engine/blob/main/stages/stage-4-deliver.md",gateUrl:"https://github.com/jonryley/summit-growth-engine/blob/main/gates/gate-4-delivery-readiness-gate.md"},
+  {name:"Amplify",weight:1.00,status:"Scaling",stageUrl:"https://github.com/jonryley/summit-growth-engine/blob/main/stages/stage-5-amplify.md",gateUrl:"https://github.com/jonryley/summit-growth-engine/blob/main/gates/gate-5-growth-gate.md"}
 ];
 
 const opportunities = [
-  ["Signal","Metro Rail","Rail",350000,"Strategic","Pass","In Progress","On Track","30 Jun 2026","amber"],
-  ["Signal","Moores Energy","Energy",420000,"Strategic","Pass","In Progress","On Track","15 Jul 2026","amber"],
-  ["Signal","Northern Grid Energy","Energy",500000,"Strategic","Pass","In Progress","On Track","01 Aug 2026","amber"],
-  ["Signal","Crown Rail Systems","Rail",375000,"Strategic","Pass","In Progress","On Track","12 Aug 2026","amber"],
+  ["Signal","Metro Rail","Rail",350000,"Strategic","Consultancy","Pass","In Progress","On Track","30 Jun 2026","amber"],
+  ["Signal","Moores Energy","Energy",420000,"Strategic","Licence","Pass","In Progress","On Track","15 Jul 2026","amber"],
+  ["Signal","Northern Grid Energy","Energy",500000,"Strategic","Upgrade","Pass","In Progress","On Track","01 Aug 2026","amber"],
+  ["Signal","Crown Rail Systems","Rail",375000,"Strategic","Consultancy","Pass","In Progress","On Track","12 Aug 2026","amber"],
 
-  ["Qualify","Summit Rail Partners","Rail",850000,"Complex","Pass","In Progress","On Track","20 Jul 2026","green"],
-  ["Qualify","Beacon Energy Group","Energy",950000,"Complex","Pass","In Progress","On Track","10 Aug 2026","amber"],
-  ["Qualify","Apex Energy Services","Energy",1200000,"Complex","Pass","In Progress","Watch","25 Aug 2026","green"],
-  ["Qualify","Platform Rail Alliance","Rail",1050000,"Complex","Pass","In Progress","On Track","05 Sep 2026","amber"],
+  ["Qualify","Summit Rail Partners","Rail",850000,"Complex","Licence","Pass","In Progress","On Track","20 Jul 2026","green"],
+  ["Qualify","Beacon Energy Group","Energy",950000,"Complex","Upgrade","Pass","In Progress","On Track","10 Aug 2026","amber"],
+  ["Qualify","Apex Energy Services","Energy",1200000,"Complex","Consultancy","Pass","In Progress","Watch","25 Aug 2026","green"],
+  ["Qualify","Platform Rail Alliance","Rail",1050000,"Complex","Licence","Pass","In Progress","On Track","05 Sep 2026","amber"],
 
-  ["Value","Pioneer Rail","Rail",1500000,"Complex","Pass","In Progress","On Track","15 Sep 2026","green"],
-  ["Value","Dunstone Energy","Energy",1800000,"Transformational","Pass","In Progress","On Track","30 Sep 2026","green"],
-  ["Value","Harbour Rail","Rail",1300000,"Complex","Pass","In Progress","Watch","10 Oct 2026","amber"],
-  ["Value","Lumen Energy Lite","Energy",50000,"Lite","Pass","Not Started","On Track","18 Oct 2026","green"],
-  ["Value","Bridgeway Rail Lite","Rail",50000,"Lite","Pass","Not Started","On Track","22 Oct 2026","green"],
+  ["Value","Pioneer Rail","Rail",1500000,"Complex","Consultancy","Pass","In Progress","On Track","15 Sep 2026","green"],
+  ["Value","Dunstone Energy","Energy",1800000,"Transformational","Licence","Pass","In Progress","On Track","30 Sep 2026","green"],
+  ["Value","Harbour Rail","Rail",1300000,"Complex","Upgrade","Pass","In Progress","Watch","10 Oct 2026","amber"],
+  ["Value","Lumen Energy Lite","Energy",50000,"Lite","Pilot","Pass","Not Started","On Track","18 Oct 2026","green"],
+  ["Value","Bridgeway Rail Lite","Rail",50000,"Lite","Pilot","Pass","Not Started","On Track","22 Oct 2026","green"],
 
-  ["Convert","Westline Rail","Rail",900000,"Complex","Pass","In Progress","On Track","31 Jul 2026","amber"],
-  ["Convert","Orion Energy","Energy",1100000,"Complex","Pass","In Progress","On Track","15 Aug 2026","green"],
-  ["Convert","MetroLink Rail","Rail",850000,"Complex","Pass","In Progress","Watch","01 Sep 2026","amber"],
+  ["Convert","Westline Rail","Rail",900000,"Complex","Consultancy","Pass","In Progress","On Track","31 Jul 2026","amber"],
+  ["Convert","Orion Energy","Energy",1100000,"Complex","Licence","Pass","In Progress","On Track","15 Aug 2026","green"],
+  ["Convert","MetroLink Rail","Rail",850000,"Complex","Upgrade","Pass","In Progress","Watch","01 Sep 2026","amber"],
 
-  ["Deliver","Keystone Rail","Rail",2000000,"Transformational","Pass","In Progress","On Track","30 Sep 2026","green"],
-  ["Deliver","Atlas Energy","Energy",1700000,"Transformational","Pass","In Progress","On Track","10 Oct 2026","green"],
-  ["Deliver","Sovereign Energy","Energy",2500000,"Transformational","Pass","In Progress","On Track","30 Oct 2026","green"],
-  ["Deliver","Northstar Rail","Rail",2200000,"Transformational","Pass","In Progress","On Track","05 Nov 2026","green"],
-  ["Deliver","Peak Energy Lite","Energy",50000,"Lite","Pass","Not Started","On Track","12 Nov 2026","green"],
-  ["Deliver","Signal Rail Lite","Rail",50000,"Lite","Pass","Not Started","On Track","15 Nov 2026","green"],
+  ["Deliver","Keystone Rail","Rail",2000000,"Transformational","Licence","Pass","In Progress","On Track","30 Sep 2026","green"],
+  ["Deliver","Atlas Energy","Energy",1700000,"Transformational","Consultancy","Pass","In Progress","On Track","10 Oct 2026","green"],
+  ["Deliver","Sovereign Energy","Energy",2500000,"Transformational","Upgrade","Pass","In Progress","On Track","30 Oct 2026","green"],
+  ["Deliver","Northstar Rail","Rail",2200000,"Transformational","Licence","Pass","In Progress","On Track","05 Nov 2026","green"],
+  ["Deliver","Peak Energy Lite","Energy",50000,"Lite","Pilot","Pass","Not Started","On Track","12 Nov 2026","green"],
+  ["Deliver","Signal Rail Lite","Rail",50000,"Lite","Pilot","Pass","Not Started","On Track","15 Nov 2026","green"],
 
-  ["Amplify","Vanguard Rail","Rail",3000000,"Transformational","Pass","Complete","On Track","31 Dec 2026","green"],
-  ["Amplify","Titan Energy","Energy",4000000,"Transformational","Pass","Complete","On Track","31 Dec 2026","green"],
-  ["Amplify","National Rail Growth","Rail",3500000,"Transformational","Pass","Complete","On Track","31 Dec 2026","green"],
-  ["Amplify","Moores Energy Lite","Energy",50000,"Lite","Pass","Complete","On Track","31 Dec 2026","green"],
-  ["Amplify","Metro Rail Lite","Rail",50000,"Lite","Pass","Complete","On Track","31 Dec 2026","green"]
+  ["Amplify","Vanguard Rail","Rail",3000000,"Transformational","Licence","Pass","Complete","On Track","31 Dec 2026","green"],
+  ["Amplify","Titan Energy","Energy",4000000,"Transformational","Licence","Pass","Complete","On Track","31 Dec 2026","green"],
+  ["Amplify","National Rail Growth","Rail",3500000,"Transformational","Upgrade","Pass","Complete","On Track","31 Dec 2026","green"],
+  ["Amplify","Moores Energy Lite","Energy",50000,"Lite","Pilot","Pass","Complete","On Track","31 Dec 2026","green"],
+  ["Amplify","Metro Rail Lite","Rail",50000,"Lite","Pilot","Pass","Complete","On Track","31 Dec 2026","green"]
 ];
 
 function formatMoney(value) {
@@ -243,7 +209,7 @@ function renderPipeline() {
     opportunities
       .filter(o => o[0] === stage.name)
       .forEach(o => {
-        const [stageName,title,sector,value,classification,gateReadiness,handover,reviewStatus,closeDate,colour] = o;
+        const [stageName,title,sector,value,classification,offerType,gateReadiness,handover,reviewStatus,closeDate,colour] = o;
 
         const card = document.createElement("div");
         card.className = `card ${colour}`;
@@ -251,13 +217,14 @@ function renderPipeline() {
         card.dataset.sector = sector;
         card.dataset.value = value;
         card.dataset.classification = classification;
+        card.dataset.offerType = offerType;
         card.dataset.gateReadiness = gateReadiness;
         card.dataset.handover = handover;
         card.dataset.reviewStatus = reviewStatus;
         card.dataset.close = closeDate;
 
         card.innerHTML = `
-          <div class="card-title">${title}</div>
+          <div class="card-title">${title} <span class="tag">"${offerType}"</span></div>
           <div class="card-value">Value: ${formatMoney(value)}</div>
           <div class="card-date">Close: ${closeDate}</div>
           <div class="card-status">Status: ${stage.status}</div>
@@ -298,6 +265,7 @@ function openModalFromCard(card) {
   document.getElementById("status").innerText = meta.stageStatus;
   document.getElementById("sector").innerText = card.dataset.sector;
   document.getElementById("classification").innerText = card.dataset.classification;
+  document.getElementById("offerType").innerText = card.dataset.offerType;
   document.getElementById("gateReadiness").innerText = card.dataset.gateReadiness;
   document.getElementById("handover").innerText = card.dataset.handover;
   document.getElementById("reviewStatus").innerText = card.dataset.reviewStatus;

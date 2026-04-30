@@ -327,6 +327,14 @@ function calculatePipeline() {
   let classificationTotals = {};
   let classificationWeighted = {};
 
+  const classificationOrder = [
+    "Lite",
+    "Standard",
+    "Strategic",
+    "Complex",
+    "Transformational"
+  ];
+
   document.querySelectorAll(".stage").forEach(stage => {
     if (stage.style.display === "none") return;
 
@@ -359,15 +367,18 @@ function calculatePipeline() {
   document.getElementById("expectedForecast").innerText = "Forecast: £" + Math.round(weighted).toLocaleString();
 
   let mixHtml = "";
-  Object.keys(classificationTotals).forEach(cls => {
-    const pct = total ? Math.round((classificationTotals[cls] / total) * 100) : 0;
-    mixHtml += `${cls}: ${pct}% (£${classificationTotals[cls].toLocaleString()})<br>`;
+  classificationOrder.forEach(cls => {
+    const clsTotal = classificationTotals[cls] || 0;
+    const pct = total ? Math.round((clsTotal / total) * 100) : 0;
+    mixHtml += `${cls}: ${pct}% (£${clsTotal.toLocaleString()})<br>`;
   });
   document.getElementById("pipelineMix").innerHTML = mixHtml || "-";
 
   let convHtml = "";
-  Object.keys(classificationTotals).forEach(cls => {
-    const rate = classificationTotals[cls] ? Math.round((classificationWeighted[cls] / classificationTotals[cls]) * 100) : 0;
+  classificationOrder.forEach(cls => {
+    const clsTotal = classificationTotals[cls] || 0;
+    const clsWeighted = classificationWeighted[cls] || 0;
+    const rate = clsTotal ? Math.round((clsWeighted / clsTotal) * 100) : 0;
     convHtml += `${cls}: ${rate}% forecast confidence<br>`;
   });
   document.getElementById("classificationConversion").innerHTML = convHtml || "-";

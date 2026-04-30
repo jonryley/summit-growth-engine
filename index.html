@@ -14,6 +14,10 @@ body{margin:0;font-family:Arial,sans-serif;background:#0b0b0b;color:white}
 .metrics{display:flex;gap:20px;flex-wrap:wrap}
 .metric{color:#d4af37;font-size:14px}
 .container{padding:20px}
+.dashboard{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-bottom:18px}
+.dash-card{background:#111;border:1px solid #222;border-radius:6px;padding:12px}
+.dash-title{color:#d4af37;font-size:13px;margin-bottom:6px}
+.dash-value{font-size:12px;color:#aaa;line-height:1.6}
 .filters{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px}
 .filter-group{display:flex;flex-direction:column;gap:6px}
 .filter-group label{font-size:12px;color:#aaa}
@@ -59,11 +63,28 @@ a{color:#d4af37}
 
   <div class="metrics">
     <div class="metric" id="totalPipeline">Total Pipeline: £0</div>
-    <div class="metric" id="weightedPipeline">Weighted Pipeline: £0</div>
+    <div class="metric" id="weightedPipeline">Expected Revenue Forecast: £0</div>
   </div>
 </div>
 
 <div class="container">
+
+  <div class="dashboard">
+    <div class="dash-card">
+      <div class="dash-title">Pipeline Mix</div>
+      <div class="dash-value" id="pipelineMix">-</div>
+    </div>
+
+    <div class="dash-card">
+      <div class="dash-title">Conversion by Classification</div>
+      <div class="dash-value" id="classificationConversion">-</div>
+    </div>
+
+    <div class="dash-card">
+      <div class="dash-title">Expected Revenue Forecast</div>
+      <div class="dash-value" id="expectedForecast">£0</div>
+    </div>
+  </div>
 
   <div class="filters">
     <div class="filter-group">
@@ -136,21 +157,31 @@ const opportunities = [
   ["Signal","Moores Energy","Energy",420000,"Strategic","Licence","Pass","In Progress","On Track","15 Jul 2026","amber"],
   ["Signal","Northern Grid Energy","Energy",500000,"Strategic","Upgrade","Pass","In Progress","On Track","01 Aug 2026","amber"],
   ["Signal","Crown Rail Systems","Rail",375000,"Strategic","Consultancy","Pass","In Progress","On Track","12 Aug 2026","amber"],
+  ["Signal","Velocity Rail Group","Rail",650000,"Strategic","Consultancy","Pass","Not Started","On Track","05 Sep 2026","amber"],
+  ["Signal","Helios Energy","Energy",720000,"Strategic","Licence","Pass","Not Started","On Track","12 Sep 2026","amber"],
+  ["Signal","Trackline Services","Rail",280000,"Standard","Consultancy","Pass","Not Started","On Track","18 Aug 2026","amber"],
+  ["Signal","GreenGrid Energy","Energy",320000,"Standard","Upgrade","Pass","Not Started","On Track","22 Aug 2026","amber"],
 
   ["Qualify","Summit Rail Partners","Rail",850000,"Complex","Licence","Pass","In Progress","On Track","20 Jul 2026","green"],
   ["Qualify","Beacon Energy Group","Energy",950000,"Complex","Upgrade","Pass","In Progress","On Track","10 Aug 2026","amber"],
   ["Qualify","Apex Energy Services","Energy",1200000,"Complex","Consultancy","Pass","In Progress","Watch","25 Aug 2026","green"],
   ["Qualify","Platform Rail Alliance","Rail",1050000,"Complex","Licence","Pass","In Progress","On Track","05 Sep 2026","amber"],
+  ["Qualify","Core Rail Systems","Rail",350000,"Standard","Consultancy","Pass","In Progress","On Track","10 Sep 2026","green"],
+  ["Qualify","Northwind Energy","Energy",420000,"Standard","Licence","Pass","In Progress","On Track","15 Sep 2026","amber"],
   ["Qualify","Lumen Energy Lite","Energy",50000,"Lite","Pilot","Pass","Not Started","On Track","18 Oct 2026","green"],
   ["Qualify","Bridgeway Rail Lite","Rail",50000,"Lite","Pilot","Pass","Not Started","On Track","22 Oct 2026","green"],
 
   ["Value","Pioneer Rail","Rail",1500000,"Complex","Consultancy","Pass","In Progress","On Track","15 Sep 2026","green"],
   ["Value","Dunstone Energy","Energy",1800000,"Transformational","Licence","Pass","In Progress","On Track","30 Sep 2026","green"],
   ["Value","Harbour Rail","Rail",1300000,"Complex","Upgrade","Pass","In Progress","Watch","10 Oct 2026","amber"],
+  ["Value","Alliance Rail","Rail",480000,"Standard","Upgrade","Pass","In Progress","On Track","20 Oct 2026","green"],
+  ["Value","Everlight Energy","Energy",520000,"Standard","Consultancy","Pass","In Progress","On Track","28 Oct 2026","amber"],
 
   ["Convert","Westline Rail","Rail",900000,"Complex","Consultancy","Pass","In Progress","On Track","31 Jul 2026","amber"],
   ["Convert","Orion Energy","Energy",1100000,"Complex","Licence","Pass","In Progress","On Track","15 Aug 2026","green"],
   ["Convert","MetroLink Rail","Rail",850000,"Complex","Upgrade","Pass","In Progress","Watch","01 Sep 2026","amber"],
+  ["Convert","Prime Rail Solutions","Rail",450000,"Standard","Consultancy","Pass","In Progress","On Track","10 Sep 2026","green"],
+  ["Convert","Vertex Energy","Energy",550000,"Standard","Licence","Pass","In Progress","On Track","18 Sep 2026","amber"],
   ["Convert","Moores Energy Lite","Energy",50000,"Lite","Pilot","Pass","In Progress","On Track","31 Oct 2026","green"],
   ["Convert","Metro Rail Lite","Rail",50000,"Lite","Pilot","Pass","In Progress","On Track","05 Nov 2026","green"],
 
@@ -158,12 +189,16 @@ const opportunities = [
   ["Deliver","Atlas Energy","Energy",1700000,"Transformational","Consultancy","Pass","In Progress","On Track","10 Oct 2026","green"],
   ["Deliver","Sovereign Energy","Energy",2500000,"Transformational","Upgrade","Pass","In Progress","On Track","30 Oct 2026","green"],
   ["Deliver","Northstar Rail","Rail",2200000,"Transformational","Licence","Pass","In Progress","On Track","05 Nov 2026","green"],
+  ["Deliver","Summit Rail Delivery","Rail",600000,"Standard","Upgrade","Pass","In Progress","On Track","05 Nov 2026","green"],
+  ["Deliver","Pulse Energy Services","Energy",650000,"Standard","Consultancy","Pass","In Progress","On Track","12 Nov 2026","green"],
   ["Deliver","Peak Energy Lite","Energy",50000,"Lite","Pilot","Pass","Not Started","On Track","12 Nov 2026","green"],
   ["Deliver","Signal Rail Lite","Rail",50000,"Lite","Pilot","Pass","Not Started","On Track","15 Nov 2026","green"],
 
   ["Amplify","Vanguard Rail","Rail",3000000,"Transformational","Licence","Pass","Complete","On Track","31 Dec 2026","green"],
   ["Amplify","Titan Energy","Energy",4000000,"Transformational","Licence","Pass","Complete","On Track","31 Dec 2026","green"],
-  ["Amplify","National Rail Growth","Rail",3500000,"Transformational","Upgrade","Pass","Complete","On Track","31 Dec 2026","green"]
+  ["Amplify","National Rail Growth","Rail",3500000,"Transformational","Upgrade","Pass","Complete","On Track","31 Dec 2026","green"],
+  ["Amplify","Rail Growth Programme","Rail",900000,"Standard","Licence","Pass","Scaling","On Track","31 Dec 2026","green"],
+  ["Amplify","Energy Optimisation Rollout","Energy",1000000,"Standard","Upgrade","Pass","Scaling","On Track","31 Dec 2026","green"]
 ];
 
 function formatMoney(value) {
@@ -289,6 +324,8 @@ function refreshCardStatuses() {
 function calculatePipeline() {
   let total = 0;
   let weighted = 0;
+  let classificationTotals = {};
+  let classificationWeighted = {};
 
   document.querySelectorAll(".stage").forEach(stage => {
     if (stage.style.display === "none") return;
@@ -299,10 +336,15 @@ function calculatePipeline() {
 
     stage.querySelectorAll(".card:not(.hidden)").forEach(card => {
       const val = parseFloat(card.dataset.value);
+      const cls = card.dataset.classification;
+
       if (!isNaN(val)) {
         total += val;
         stageTotal += val;
         weighted += val * stageWeight;
+
+        classificationTotals[cls] = (classificationTotals[cls] || 0) + val;
+        classificationWeighted[cls] = (classificationWeighted[cls] || 0) + (val * stageWeight);
       }
     });
 
@@ -313,7 +355,22 @@ function calculatePipeline() {
   });
 
   document.getElementById("totalPipeline").innerText = "Total Pipeline: £" + total.toLocaleString();
-  document.getElementById("weightedPipeline").innerText = "Weighted Pipeline: £" + Math.round(weighted).toLocaleString();
+  document.getElementById("weightedPipeline").innerText = "Expected Revenue Forecast: £" + Math.round(weighted).toLocaleString();
+  document.getElementById("expectedForecast").innerText = "Forecast: £" + Math.round(weighted).toLocaleString();
+
+  let mixHtml = "";
+  Object.keys(classificationTotals).forEach(cls => {
+    const pct = total ? Math.round((classificationTotals[cls] / total) * 100) : 0;
+    mixHtml += `${cls}: ${pct}% (£${classificationTotals[cls].toLocaleString()})<br>`;
+  });
+  document.getElementById("pipelineMix").innerHTML = mixHtml || "-";
+
+  let convHtml = "";
+  Object.keys(classificationTotals).forEach(cls => {
+    const rate = classificationTotals[cls] ? Math.round((classificationWeighted[cls] / classificationTotals[cls]) * 100) : 0;
+    convHtml += `${cls}: ${rate}% forecast confidence<br>`;
+  });
+  document.getElementById("classificationConversion").innerHTML = convHtml || "-";
 }
 
 function applyFilters() {

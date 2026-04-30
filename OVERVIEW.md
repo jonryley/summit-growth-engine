@@ -3,6 +3,7 @@
 <p align="left">
   <img src="images/Summit%20logo%20alpha.png" alt="Summit Logo" width="240"/>
 </p>
+
 # Summit Growth Engine  
 ## A Commercial Operating System for Predictable, Scalable Growth
 

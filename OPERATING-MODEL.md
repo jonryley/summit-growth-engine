@@ -62,8 +62,8 @@ Summit uses the Gated Business Lifecycle to move opportunities from signal to sc
 ```text
 Stage 0 Signal
 Stage 1 Qualify
-Stage 2 Value
-Stage 3 Convert
+Stage 2 Shape
+Stage 3 Pursue
 Stage 4 Deliver
 Stage 5 Amplify
 ```

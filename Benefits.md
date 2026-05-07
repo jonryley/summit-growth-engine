@@ -68,7 +68,7 @@ Instead:
 ---
 
 ### Rail & Infrastructure  
-*Example: Telent*
+*Example: Omnicom BB*
 
 - Cleaner pipelines with real, winnable opportunities  
 - Faster, more effective bid and tender processes  

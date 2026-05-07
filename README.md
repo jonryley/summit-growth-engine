@@ -18,14 +18,27 @@
 
 # Summit Growth Engine
 ## The AI-Enabled Commercial Operating System
+
 ### Summit helps complex organisations improve qualification, governance, forecasting, delivery alignment and scalable growth through a gated commercial operating model powered by CRM, data and AI.
 
 ---
-##  Operating Stack
 
-People → Process → CRM → Data → AI → Governance → Growth
+## Why Summit Matters
 
-The Summit Framework drives decisions.
+Modern enterprise growth is increasingly complex.
+
+Most organisations do not have a pipeline problem.  
+They have a qualification, governance, forecasting and execution problem.
+
+Summit was designed to solve this by combining commercial governance, CRM discipline, data intelligence, AI-enabled insight, delivery alignment and operating cadence into one scalable growth system.
+
+---
+
+## Operating Stack
+
+**People → Process → CRM → Data → AI → Governance → Growth**
+
+The Summit Growth Engine drives decisions.
 
 Each stage is defined.  
 Each gate creates truth.  
@@ -34,101 +47,19 @@ Each progression is earned.
 This is not a collection of files.  
 It is a navigable commercial system.
 
-Summit is a commercial operating system designed to help organisations win more business by transforming how sales, business development, CRM, and delivery work together.
-
-It replaces activity driven sales with structured execution, clear decision making, and measurable progress.
+Summit replaces activity-driven sales with structured execution, clear decision making and measurable commercial progress.
 
 It ensures opportunities move based on evidence, not optimism.
 
-
 ---
 
-## Explore Summit
+## The Summit Growth Engine
 
-- [Interactive Pipeline](https://jonryley.github.io/summit-growth-engine/)
-- [Summit Overview](OVERVIEW.md)
-- [Services](SERVICES.md/)
-- [Summit Operating Model](OPERATING-MODEL.md)
-- [Operating Controls](OPERATING-CONTROLS.md)
-- [Opportunity Classification](CLASSIFICATION.md)
-- [Stage Definitions](stages/)
-- [Gate Definitions](gates/)
----
-
-## Why Summit Exists
-
-Most organisations do not have a sales problem.  
-
-They have:
-
-- Too many opportunities that should never progress  
-- CRM systems that track activity but not decision quality  
-- Weak qualification hidden behind good conversations  
-- Poor alignment between sales and delivery  
-- Forecasts based on hope rather than evidence  
-
-Summit fixes this.
-
----
-## Opportunity Classification
-
-Summit classifies opportunities to determine the level of governance required.
-
-Lite → Standard → Strategic → Complex → Transformational
-
-Classification drives:
-
-- Level of governance  
-- Depth of controls  
-- Gate rigor  
-- Review cadence  
-
-Full definitions:
-
-[Opportunity Classification](CLASSIFICATION.md)
-
----
-## What Summit Does
-
-Summit introduces a stage driven lifecycle that ensures:
-
-- Only the right opportunities progress  
-- The right data is captured at the right time  
-- Decisions are based on evidence, not optimism  
-- Sales, leadership, and delivery stay aligned  
-- Growth is built on successful delivery, not constant new selling  
-
----
-## Who Summit Serves
-
-- PE backed growth businesses  
-- Enterprise sales organisations  
-- Regulated sector complex bids  
-- CRM transformation programmes  
-- Revenue operations leaders
-
----
-
-## License Summit
-
-Interested in applying Summit in your organisation?
-
-Contact:
-https://jonryley.com/contact
-
----
-
-## Summit in Practice
-
-<p align="center">
-  <img src="images/GAGBL.png" alt="Genesis Arc Gated Business Lifecycle" width="900"/>
-</p>
-
----
-
-## The Lifecycle
-
-```mermaid
-flowchart LR
-    A["Stage 0 Signal"] --> B["Stage 1 Qualify"] --> C["Stage 2 Value"] --> D["Stage 3 Convert"] --> E["Stage 4 Deliver"] --> F["Stage 5 Amplify"]
-```
+```text
+Executive Governance
+        ↓
+Signal → Qualify → Value → Convert → Deliver → Amplify
+        ↓
+People | Process | CRM | Data | AI | Governance | Cadence
+        ↓
+Predictable Scalable Growth

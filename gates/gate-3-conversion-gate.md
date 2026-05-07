@@ -4,7 +4,7 @@
   <img src="/images/Summit%20logo%20alpha.png" alt="Summit Logo" width="240"/>
 </p>
 
-# Gate 3 Conversion Gate
+# Gate 3 Conversion and Close Gate
 
 ## Purpose
 

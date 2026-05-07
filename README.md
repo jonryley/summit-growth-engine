@@ -1,23 +1,17 @@
 ![Framework](https://img.shields.io/badge/Framework-Summit-gold)
-
 ![Model](https://img.shields.io/badge/Model-Gated_Business_Lifecycle-black)
-
 ![Status](https://img.shields.io/badge/Version-1.0-gold)
 
 <div align="center">
 
 <img src="images/Summit%20logo%20alpha.png" 
-
      alt="Summit Logo" 
-
      width="320"/>
 
 <br><br>
 
 <img src="images/JR%20Logo%2001%20New.png" 
-
      alt="Jon Ryley Logo" 
-
      width="120"/>
 
 </div>

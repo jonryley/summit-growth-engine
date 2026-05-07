@@ -21,7 +21,7 @@ Decide whether the value case is strong enough to move towards conversion.
 
 ## Decision Options
 
-- Progress to Convert
+- Progress to Pursue Stage 
 - Hold
 - Rework
 - Stop

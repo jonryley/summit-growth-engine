@@ -9,8 +9,8 @@
 </p>
 
 # Summit Growth Engine
-## Commercial operating system for predictable scalable growth.
-### Structure for growth. Discipline for scale.
+## The AI-Enabled Commercial Operating System
+### Summit helps complex organisations improve qualification, governance, forecasting, delivery alignment and scalable growth through a gated commercial operating model powered by CRM, data and AI.
 
 ---
 ##  Operating Stack

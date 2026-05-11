@@ -4,7 +4,7 @@
   <img src="/images/Summit%20logo%20alpha.png" alt="Summit Logo" width="240"/>
 </p>
 
-# Stage 3 Convert
+# Stage 3 Pursue
 
 ## Objective
 

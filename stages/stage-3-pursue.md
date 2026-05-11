@@ -4,43 +4,60 @@
   <img src="/images/Summit%20logo%20alpha.png" alt="Summit Logo" width="240"/>
 </p>
 
-# Stage 3 Pursue
+# Stage 3 Convert
 
 ## Objective
 
-Move the opportunity to a buying decision and secure commitment.
+Convert the shaped opportunity into a committed commercial agreement with clear delivery alignment and acceptable commercial risk.
+
+## Typical Inputs
+
+- Approved Stage 2 value case
+- Customer engagement and stakeholder feedback
+- Commercial proposal requirements
+- Pricing and delivery inputs
+- Procurement or governance requirements
+- Competitive intelligence
 
 ## Activities
 
-- Align key stakeholders
-- Run proposal or bid process
-- Confirm commercials
-- Handle objections and risk concerns
-- Strengthen executive sponsorship
-- Manage legal, procurement, and governance steps
-- Secure agreement and close plan
+- Finalise the commercial and solution proposal
+- Refine the win strategy and close plan
+- Validate stakeholder alignment and buying position
+- Confirm commercial structure and pricing
+- Address customer objections, concerns, and risks
+- Manage negotiations and procurement activity
+- Align delivery, operational, legal, and commercial stakeholders
+- Assess contractual and delivery risks
+- Secure internal governance and approval
+- Drive the opportunity towards formal commitment and close
 
-## Required Output
+## Required Outputs
 
-- Proposal submitted
-- Commercial terms agreed in principle
-- Close plan active
-- Decision path visible
+- Final proposal or commercial offer
+- Agreed commercial structure and pricing
+- Active close plan
+- Confirmed stakeholder and decision map
+- Risk and approval assessment
+- Negotiated commercial position
+- Recommendation to progress, hold, rework, or stop
 
 ## Entry Criteria
 
-- Value case developed
-- Solution direction supported
-- Internal and external stakeholders engaged
+- Customer value case approved
+- Solution direction and commercial logic agreed
+- Stakeholder engagement established
+- Internal commitment to pursue confirmed
 
 ## Exit Criteria
 
-- Contract award, formal commitment, or approved next step to delivery
+- A commercial agreement, contract award, or formal customer commitment is achieved with acceptable delivery and commercial risk
 
 ## Key Questions
 
-- Is there a live buying process
-- Who signs
-- What could block the decision
-- What has to happen to close
-- Are we preferred
+- Do we understand the buying and approval process?
+- Who makes the final decision?
+- Is the proposal aligned to customer priorities?
+- Are commercial terms acceptable?
+- What could prevent the deal from closing?
+- Are delivery and operational teams aligned and ready?

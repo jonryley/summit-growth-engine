@@ -8,38 +8,59 @@
 
 ## Objective
 
-Translate the sale into confident execution and protect trust through strong mobilisation.
+Successfully deliver the committed customer outcome while protecting commercial performance, customer confidence, and future growth potential.
+
+## Typical Inputs
+
+- Signed contract or commercial agreement
+- Approved scope and commercials
+- Delivery and mobilisation plan
+- Customer success criteria
+- Governance and reporting requirements
+- Operational and resource commitments
 
 ## Activities
 
-- Confirm scope and success measures
-- Assign delivery owner
-- Handover from sales to delivery
-- Validate assumptions and risks
-- Confirm governance and reporting
-- Launch mobilisation plan
-- Establish first value milestones
+- Mobilise delivery and operational teams
+- Confirm scope, objectives, and success measures
+- Establish governance, reporting, and cadence
+- Manage customer communication and stakeholder alignment
+- Deliver contracted products, services, or outcomes
+- Monitor commercial performance, risks, and dependencies
+- Manage change control and issue resolution
+- Track customer satisfaction and value realisation
+- Capture delivery insight, lessons learned, and growth opportunities
+- Identify expansion, renewal, or amplification potential
 
-## Required Output
+## Required Outputs
 
-- Delivery ready plan
-- Handover completed
-- Roles and responsibilities clear
-- Customer onboarding or mobilisation complete
+- Mobilised delivery plan
+- Operational governance structure
+- Customer success and performance reporting
+- Managed commercial and delivery risk position
+- Agreed delivered outcomes
+- Customer feedback and relationship assessment
+- Identified follow-on growth opportunities
 
 ## Entry Criteria
 
-- Deal committed
+- Commercial agreement completed
+- Internal approvals secured
 - Delivery ownership assigned
+- Customer onboarding or mobilisation initiated
 
 ## Exit Criteria
 
-- Delivery is live with clear governance and early confidence
+- Contracted outcomes delivered successfully
+- Customer relationship stabilised and strengthened
+- Delivery performance and commercial obligations achieved
+- Growth, renewal, or amplification opportunities identified
 
 ## Key Questions
 
-- Is the scope fully understood
-- Is the customer aligned
-- Is the delivery team ready
-- What could damage confidence early
-- How will value be measured
+- Are we delivering the promised customer outcome?
+- Is delivery commercially healthy?
+- Are risks and issues controlled?
+- Is customer confidence increasing or decreasing?
+- Are stakeholders aligned and informed?
+- What future opportunities are emerging?

@@ -8,38 +8,58 @@
 
 ## Objective
 
-Turn successful delivery into retention, growth, advocacy, and strategic account expansion.
+Expand customer value, strengthen strategic relationships, and create scalable long-term growth from successful delivery outcomes.
+
+## Typical Inputs
+
+- Successful delivery outcome
+- Positive customer relationship position
+- Proven operational and commercial value
+- Customer feedback and performance insight
+- Identified expansion, renewal, or innovation opportunities
+- Strategic account or market growth plans
 
 ## Activities
 
-- Review value delivered
-- Capture customer feedback
-- Identify upsell and cross sell opportunities
-- Build reference story or case study
-- Expand stakeholder access
-- Create account growth plan
-- Support renewal or extension strategy
+- Strengthen executive and stakeholder relationships
+- Capture customer outcomes, success stories, and references
+- Identify expansion, renewal, cross-sell, and upsell opportunities
+- Explore additional operational or strategic value areas
+- Develop long-term account growth plans
+- Increase customer advocacy and market credibility
+- Share operational insight and lessons across the organisation
+- Improve delivery, commercial, and governance models
+- Scale successful approaches into wider markets or sectors
+- Support innovation, partnership, and strategic collaboration opportunities
 
-## Required Output
+## Required Outputs
 
-- Growth plan
-- Expansion opportunities identified
-- Reference potential assessed
-- Renewal path visible
+- Account growth strategy
+- Expansion or renewal opportunities
+- Customer advocacy or reference position
+- Strategic relationship plan
+- Operational improvement insight
+- Market or sector growth opportunities
+- Long-term value creation roadmap
 
 ## Entry Criteria
 
-- Delivery underway or completed
-- Evidence of value emerging
+- Customer outcomes successfully delivered
+- Relationship health is positive
+- Commercial position is stable
+- Growth potential exists
 
 ## Exit Criteria
 
-- Account has clear next growth actions and ownership
+- Sustainable long-term growth opportunities are established
+- Customer relationship maturity has increased
+- Repeatable commercial and operational insight has been captured and scaled
 
 ## Key Questions
 
-- What value has been proven
-- Who else in the account matters
-- What follow on work is possible
-- Can this become a reference
-- What would deepen the relationship
+- How do we deepen customer value?
+- Where can we expand or scale?
+- What strategic problems can we solve next?
+- How do we become a trusted long-term partner?
+- What lessons or models can be replicated elsewhere?
+- How do we turn success into sustainable growth?

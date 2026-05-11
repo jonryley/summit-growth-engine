@@ -9,7 +9,7 @@
 
 ## Objective
 
-Identify a credible signal that suggests a potential commercial opportunity exists.
+Identify whether a credible commercial signal exists that may justify further engagement.
 
 ## Typical Inputs
 
@@ -27,28 +27,31 @@ Identify a credible signal that suggests a potential commercial opportunity exis
 - Capture the initial signal
 - Identify the account or market context
 - Record the source of the signal
-- Confirm whether there is a problem, trigger, or opportunity worth exploring
+- Assess whether a real problem, trigger, or opportunity may exist
+- Identify potential stakeholders or buying context
 - Assign an owner for next action
 
-## Required Output
+## Required Outputs
 
 - Opportunity or lead created
-- Initial summary written
+- Initial summary recorded
+- Account context identified
 - Named owner assigned
-- First next step agreed
+- Initial next action agreed
 
 ## Entry Criteria
 
-- A real signal has been observed
-- There is an identifiable organisation or buying context
+- A credible signal has been identified
+- There is an identifiable organisation, market, or buying context
 
 ## Exit Criteria
 
-- Enough evidence exists to justify formal qualification
+- Sufficient evidence exists to justify formal qualification
 
 ## Key Questions
 
-- What has happened to trigger interest
-- Why now
-- Who is involved or affected
-- Is this aligned to our market and offer
+- What triggered the signal?
+- Why now?
+- What problem or opportunity may exist?
+- Who could be impacted or involved?
+- Is this aligned to our market, capability, and strategy?

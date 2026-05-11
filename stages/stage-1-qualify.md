@@ -8,39 +8,53 @@
 
 ## Objective
 
-Confirm whether the opportunity is real, worth pursuing, winnable, and deliverable.
+Determine whether the opportunity is real, commercially viable, strategically aligned, winnable, and deliverable.
+
+## Typical Inputs
+
+- Approved Stage 0 signal
+- Initial customer discussions
+- Stakeholder insight
+- Account intelligence
+- Market context
+- Existing relationship history
 
 ## Activities
 
-- Clarify the customer problem
-- Identify stakeholder landscape
-- Assess timing and urgency
+- Clarify the customer problem or need
+- Identify stakeholders, influencers, and decision makers
+- Assess timing, urgency, and drivers
 - Estimate commercial potential
-- Test solution fit
-- Assess delivery confidence
-- Evaluate competitive position
+- Assess strategic alignment
+- Evaluate solution fit
+- Assess delivery confidence and operational capability
+- Evaluate competitive position and likelihood of success
+- Define the initial win strategy
 
-## Required Output
+## Required Outputs
 
-- Qualified opportunity
-- Qualification summary
-- Early win strategy
-- Decision to progress, hold, or stop
+- Qualified opportunity record
+- Qualification summary completed
+- Stakeholder map initiated
+- Initial win strategy defined
+- Indicative value and timing understood
+- Recommendation to progress, hold, rework, or stop
 
 ## Entry Criteria
 
-- Signal captured
-- Account identified
-- Initial engagement possible
+- Stage 0 Signal approved
+- Account and opportunity context identified
+- Initial engagement or access exists
 
 ## Exit Criteria
 
-- Qualification evidence is strong enough to justify deeper value shaping
+- Sufficient qualification evidence exists to justify formal value development and opportunity shaping
 
 ## Key Questions
 
-- Is it real
-- Is it worth it
-- Can we win it
-- Can we deliver it
-- Is there urgency
+- Is it real?
+- Is it worth pursuing?
+- Can we win it?
+- Can we deliver successfully?
+- Is there urgency or a compelling event?
+- Is this strategically aligned?

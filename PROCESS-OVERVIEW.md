@@ -193,6 +193,27 @@ it does not progress
 
 ---
 
+## Summit Qualification Engine
+
+The Summit Qualification Engine (QQ) provides the commercial qualification and governance layer across the lifecycle.
+
+QQ validates:
+- Is it Real?
+- Is it Worth It?
+- Can We Win It?
+- Can We Deliver It?
+
+It combines:
+- commercial qualification
+- delivery readiness
+- governance visibility
+- relationship intelligence
+- commercial risk assessment
+
+[Read More](SUMMIT-QQ.md)
+
+---
+
 ## Lifecycle Flow
 
 Signal → Qualify → Value → Convert → Grow → Amplify  

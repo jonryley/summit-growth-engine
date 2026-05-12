@@ -122,7 +122,7 @@ Predictable Scalable Growth
 ## Explore Summit
 
 ### Core Framework
-- [Interactive Pipeline](https://jonryley.github.io/summit-growth-engine/)
+- [Interactive Pipeline](https://jonryley.github.io/summit-growth-engine/pipeline.html)
 - [Summit Overview](OVERVIEW.md)
 - [Process Overview](PROCESS-OVERVIEW.md)
 - [Summit Operating Model](OPERATING-MODEL.md)

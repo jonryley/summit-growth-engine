@@ -1,5 +1,3 @@
-# README.md
-
 ![Framework](https://img.shields.io/badge/Framework-Summit-gold)
 ![Model](https://img.shields.io/badge/Model-Gated_Business_Lifecycle-black)
 ![Status](https://img.shields.io/badge/Version-1.0-gold)
@@ -25,12 +23,9 @@
      width="1200" 
      alt="Summit Growth Engine Process Flow"/>
 
-Summit transforms fragmented sales activity into a governed,
-AI-enabled commercial growth system.
+Summit transforms fragmented sales activity into a governed, AI-enabled commercial growth system.
 
-Summit helps complex organisations improve qualification, governance,
-forecasting, delivery alignment and scalable growth through a gated
-commercial operating model powered by CRM, data and AI.
+Summit helps complex organisations improve qualification, governance, forecasting, delivery alignment and scalable growth through a gated commercial operating model powered by CRM, data and AI.
 
 ---
 
@@ -42,6 +37,52 @@ Most organisations do not have a pipeline problem.
 They have a qualification, governance, forecasting and execution problem.
 
 Summit was designed to solve this by combining commercial governance, CRM discipline, data intelligence, AI-enabled insight, delivery alignment and operating cadence into one scalable growth system.
+
+Summit transforms CRM from a system of record into a system of commercial insight.
+
+---
+
+## Why Summit Is Different
+
+Most CRM systems manage activity.
+
+Most sales methodologies focus only on conversion.
+
+Most governance models operate separately from delivery.
+
+Summit combines:
+
+- Qualification  
+- Governance  
+- CRM discipline  
+- Delivery alignment  
+- AI-enabled intelligence  
+- Commercial visibility  
+- Operating cadence  
+- Forecast governance  
+
+into one integrated commercial operating system.
+
+The result is more disciplined growth, stronger forecasting and better commercial execution.
+
+---
+
+## Why Now?
+
+Commercial complexity is increasing.
+
+Organisations are struggling with:
+
+- Fragmented CRM adoption  
+- Inconsistent qualification  
+- Disconnected delivery governance  
+- Unreliable forecasting  
+- Rising bid costs  
+- Weak operating cadence  
+- Growing AI disruption  
+- Poor commercial visibility  
+
+Summit was designed for this environment.
 
 ---
 
@@ -91,6 +132,10 @@ Predictable Scalable Growth
 - [Stage Definitions](stages/)
 - [Gate Definitions](gates/)
 - [Opportunity Classification](CLASSIFICATION.md)
+- [Summit Qualification Engine](SUMMIT-QQ.md)
+
+### Commercial Governance
+- [Operating Controls](OPERATING-CONTROLS.md)
 - [Summit Qualification Engine](SUMMIT-QQ.md)
 
 ### Commercial Application
@@ -196,6 +241,11 @@ The intelligence layer can include:
 - Commercial risk analysis  
 - Margin and cashflow visibility  
 
+AI in Summit enhances commercial insight, governance and forecasting.
+
+AI supports judgement.  
+It does not replace leadership, qualification discipline or commercial decision making.
+
 ---
 
 ## Operating Rhythm
@@ -253,22 +303,38 @@ Summit introduces a stage-driven lifecycle that ensures:
 - Bid effort is focused where it matters  
 - Growth is built on successful delivery, not constant new selling  
 
+Delivery starts before the sale closes.
+
 ---
 
-## Who Summit Serves
+## Who Summit Supports
 
 Summit is designed for organisations operating in complex, high-value commercial environments.
 
-- PE-backed growth businesses  
-- Enterprise sales organisations  
-- Regulated sector complex bids  
-- CRM transformation programmes  
-- Revenue operations leaders  
-- Rail and transportation businesses  
-- Energy and utilities organisations  
-- Defence and cyber businesses  
-- Infrastructure and construction companies  
-- Managed services providers  
+Typical stakeholders include:
+
+- CEOs  
+- CROs  
+- Sales Directors  
+- Revenue Operations Leaders  
+- Commercial Directors  
+- Bid Leaders  
+- Delivery Directors  
+- Transformation Leaders  
+- CRM & AI Transformation Teams  
+
+---
+
+## Designed For
+
+- Rail & Transportation  
+- Energy & Utilities  
+- Defence & Cyber  
+- Infrastructure & Construction  
+- Managed Services  
+- Complex Enterprise Sales  
+- PE-Backed Growth Organisations  
+- CRM & Revenue Transformation Programmes  
 
 ---
 
@@ -309,18 +375,17 @@ Summit is evolving toward:
 - Integrated delivery intelligence  
 - Commercial operating orchestration  
 
----
+Future roadmap areas include:
 
-## Designed For
-
-- Rail & Transportation  
-- Energy & Utilities  
-- Defence & Cyber  
-- Infrastructure & Construction  
-- Managed Services  
-- Complex Enterprise Sales  
-- PE-Backed Growth Organisations  
-- CRM & Revenue Transformation Programmes  
+- AI qualification scoring  
+- Forecast confidence modelling  
+- Relationship heat mapping  
+- Governance automation  
+- Commercial risk analytics  
+- Delivery intelligence integration  
+- Salesforce integration  
+- Microsoft Dynamics integration  
+- Executive command centre dashboards  
 
 ---
 
@@ -338,6 +403,15 @@ Summit combines experience across:
 - Enterprise delivery alignment  
 
 Built from experience across rail, energy, defence, cyber, infrastructure and regulated enterprise environments.
+
+---
+
+## Summit Philosophy
+
+Growth without governance creates noise.  
+Governance without intelligence creates delay.  
+
+Summit combines both to create predictable scalable growth.
 
 ---
 

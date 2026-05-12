@@ -54,7 +54,7 @@ Focus only on opportunities that can be won
 
 ---
 
-## Stage 2 — Value
+## Stage 2 — Shape
 
 **Objective**  
 Define and shape the commercial outcome  

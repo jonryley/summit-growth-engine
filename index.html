@@ -149,7 +149,7 @@
     }
 
     .hero {
-      padding: 82px 0 20px;
+      padding: 82px 0 0;
       position: relative;
       overflow: hidden;
     }
@@ -171,7 +171,7 @@
       display: grid;
       grid-template-columns: 1.04fr 0.96fr;
       gap: 28px;
-      align-items: stretch;
+      align-items: start;
       position: relative;
       z-index: 1;
     }
@@ -246,7 +246,7 @@
 
     .hero-panel {
       position: relative;
-      padding: 26px;
+      padding: 24px;
       overflow: hidden;
       min-height: auto;
     }
@@ -266,7 +266,7 @@
       justify-content: space-between;
       gap: 18px;
       align-items: start;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       position: relative;
       z-index: 2;
     }
@@ -286,22 +286,24 @@
     .ascent-line {
       white-space: nowrap;
       display: block;
-      font-size: 0.86rem;
+      font-size: 0.82rem;
     }
 
     .arc-image {
       width: 100%;
+      max-width: 760px;
       height: auto;
       display: block;
       border-radius: 18px;
       position: relative;
       z-index: 2;
+      margin: 0 auto;
     }
 
     section { padding: 30px 0; }
 
     #why {
-      padding-top: 90px;
+      padding-top: 45px;
     }
 
     .section-head {
@@ -508,6 +510,12 @@
       font-size: 0.92rem;
     }
 
+    .copyright {
+      color: #8f8773;
+      font-size: 0.84rem;
+      margin-top: 10px;
+    }
+
     @media (max-width: 900px) {
       .nav {
         align-items: flex-start;
@@ -529,6 +537,10 @@
       .three-up,
       .stages-grid {
         grid-template-columns: 1fr;
+      }
+
+      .arc-image {
+        max-width: 680px;
       }
     }
 
@@ -589,15 +601,15 @@
 
           <div class="proof-strip">
             <div class="proof">
-              <strong>6 stages</strong>
+              <strong>6 Stages</strong>
               <span>A complete lifecycle from opportunity signal to customer advocacy</span>
             </div>
             <div class="proof">
-              <strong>Gated</strong>
+              <strong>6 Gates</strong>
               <span>Decision points that create discipline, clarity and control</span>
             </div>
             <div class="proof">
-              <strong>1 rhythm</strong>
+              <strong>1 Rhythm</strong>
               <span>Shared commercial structure across sales, delivery and leadership</span>
             </div>
           </div>
@@ -844,7 +856,7 @@
       <div class="container">
         <div class="cta-card">
           <div>
-            <h2>Implement Summit inside the real business.</h2>
+            <h2>Implement Summit inside your real business.</h2>
             <p>
               The public model shows the architecture. Full implementation embeds Summit across CRM,
               pipeline design, qualification, leadership operating rhythm, delivery alignment and AI-enabled commercial decision making.
@@ -869,24 +881,15 @@
     </section>
   </main>
 
- 
-
-<footer>
-
-  <div class="container">
-
-   <div style="margin-bottom:10px;">
-
-      Summit Growth Engine • Gates create truth. Truth creates growth. • AI-enabled commercial operating system
-
+  <footer>
+    <div class="container">
+      <div>
+        Summit Growth Engine • Gates create truth. Truth creates growth. • AI-enabled commercial operating system
+      </div>
+      <div class="copyright">
+        © Jon Ryley 2026. All rights reserved.
+      </div>
     </div>
-
-    <div style="color:#8f8773; font-size:0.84rem;">
-
-      © Jon Ryley 2026. All rights reserved.
-
-    </div>
-
-  </div>
-
-</footer>
+  </footer>
+</body>
+</html>

@@ -129,19 +129,18 @@ Predictable Scalable Growth
 - [Summit Operating Model](OPERATING-MODEL.md)
 - [Operating Controls](OPERATING-CONTROLS.md)
 
-### Industry Segments
 
-Summit adapts to the operational, commercial and governance realities of complex industries.
-Each industry segment demonstrates how the Summit Growth Engine applies structured qualification, governance, forecasting and delivery alignment within sector-specific environments.
 
-| Industry | Focus Area |
-|---|---|
+## Industry Segments
 
-| [Rail](industry/rail.md) | Safety-critical infrastructure, operational governance and long-cycle opportunity management |
+- [Rail](industry/rail.md)
+- Safety-critical infrastructure, operational governance and long-cycle opportunity management
 
-| [Energy](industry/energy.md) | Net Zero transformation, B2B/B2C growth and regulated infrastructure |
+- [Energy](industry/energy.md)
+-  Net Zero transformation, B2B/B2C growth and regulated infrastructure
 
-| [Defence](industry/defence.md) | Strategic programmes, secure commercial governance and operational assurance |
+- [Defence](industry/defence.md)
+- Strategic programmes, secure commercial governance and operational assurance
 
 ### Lifecycle
 - [Stage Definitions](stages/)

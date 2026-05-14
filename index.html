@@ -15,14 +15,23 @@
       --gold: #d4af37;
       --gold-2: #f0d77d;
       --gold-soft: rgba(212,175,55,0.12);
-      --radius: 24px;
       --radius-lg: 32px;
       --shadow: 0 24px 70px rgba(0,0,0,0.34);
       --max: 1200px;
     }
 
     * { box-sizing: border-box; }
+
     html { scroll-behavior: smooth; }
+
+    section,
+    #top,
+    #model,
+    #why,
+    #stages,
+    #implement {
+      scroll-margin-top: 120px;
+    }
 
     body {
       margin: 0;
@@ -110,12 +119,14 @@
       padding: 13px 18px;
       border-radius: 999px;
       font-weight: 700;
-      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+      transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
       border: 1px solid transparent;
       cursor: pointer;
     }
 
-    .button:hover { transform: translateY(-1px); }
+    .button:hover {
+      transform: translateY(-1px);
+    }
 
     .button.primary {
       background: linear-gradient(135deg, var(--gold), var(--gold-2));
@@ -129,13 +140,16 @@
       color: var(--text);
     }
 
+    .button.primary:hover,
     .button.secondary:hover {
-      border-color: rgba(212,175,55,0.25);
-      background: rgba(212,175,55,0.08);
+      background: linear-gradient(135deg, var(--gold), var(--gold-2));
+      color: #17130a;
+      border-color: transparent;
+      box-shadow: 0 10px 30px rgba(212,175,55,0.22);
     }
 
     .hero {
-      padding: 82px 0 46px;
+      padding: 82px 0 20px;
       position: relative;
       overflow: hidden;
     }
@@ -269,6 +283,12 @@
       font-size: 0.88rem;
     }
 
+    .ascent-line {
+      white-space: nowrap;
+      display: block;
+      font-size: 0.86rem;
+    }
+
     .arc-image {
       width: 100%;
       height: auto;
@@ -279,6 +299,10 @@
     }
 
     section { padding: 30px 0; }
+
+    #why {
+      padding-top: 90px;
+    }
 
     .section-head {
       margin-bottom: 18px;
@@ -512,6 +536,10 @@
       .proof-strip { grid-template-columns: 1fr; }
       .split { grid-template-columns: 1fr; }
       .quote { grid-template-columns: 1fr; }
+
+      .ascent-line {
+        white-space: normal;
+      }
     }
   </style>
 </head>
@@ -579,14 +607,14 @@
           <div class="panel-head">
             <div>
               <h2>The Summit Ascent</h2>
-              <span>Signal → Qualify → Shape → Convert → Deliver → Amplify</span>
+              <span class="ascent-line">Signal → Qualify → Shape → Convert → Deliver → Amplify</span>
             </div>
             <div style="text-align:right; color:var(--muted); font-size:0.84rem; max-width:18ch;">
               If it does not pass the gate, it does not move.
             </div>
           </div>
 
-          <img src="images/SAGBL2.png" alt="Summit Lifecycle" class="arc-image" />
+          <img src="images/SAGBL1.png" alt="Summit Lifecycle" class="arc-image" />
         </div>
       </div>
     </section>

@@ -1,11 +1,3 @@
-# Rail Segment
-## Summit Growth Engine — Rail Sector Operating Model
-
-![Segment](https://img.shields.io/badge/Segment-Rail-gold)
-![Sector](https://img.shields.io/badge/Industry-Critical_Infrastructure-black)
-![Focus](https://img.shields.io/badge/Focus-Winning_Complex_Rail_Business-gold)
-
----
 
 <div align="center">
 
@@ -20,6 +12,15 @@
      width="120"/>
 
 </div>
+
+# Rail Segment
+## Summit Growth Engine — Rail Sector Operating Model
+
+![Segment](https://img.shields.io/badge/Segment-Rail-gold)
+![Sector](https://img.shields.io/badge/Industry-Critical_Infrastructure-black)
+![Focus](https://img.shields.io/badge/Focus-Winning_Complex_Rail_Business-gold)
+
+
 
 
 ---

@@ -130,17 +130,10 @@ Predictable Scalable Growth
 - [Operating Controls](OPERATING-CONTROLS.md)
 
 
-
 ## Industry Segments
-
-- [Rail](industry/rail.md)
-- Safety-critical infrastructure, operational governance and long-cycle opportunity management
-
-- [Energy](industry/energy.md)
--  Net Zero transformation, B2B/B2C growth and regulated infrastructure
-
-- [Defence](industry/defence.md)
-- Strategic programmes, secure commercial governance and operational assurance
+- [Rail](industry/rail.md)Safety-critical infrastructure, operational governance and long-cycle opportunity management
+- [Energy](industry/energy.md) Net Zero transformation, B2B/B2C growth and regulated infrastructure
+- [Defence](industry/defence.md) Strategic programmes, secure commercial governance and operational assurance
 
 ### Lifecycle
 - [Stage Definitions](stages/)
